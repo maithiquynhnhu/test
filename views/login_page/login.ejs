@@ -1,0 +1,20 @@
+<!-- form thực hiện login, post data lên /login -->
+<div id="content">
+    <div class="form-login">
+        <div class="title">ĐĂNG NHẬP</div>
+        <% if (messages.error) { %> 
+            <%= messages.error %>
+            <% }  %> 
+        <form action="/login" method="POST">
+            <input class="form-input" name="username" type="text" placeholder="Tên đăng nhập" id="name" required>
+            <input class="form-input" name="password" type="password" placeholder="Mật khẩu" id="pwd" required>
+            <input class="btn-sign-in" type="submit" value="ĐĂNG NHẬP">
+            <div class="forget-password">
+                <a href="" class="forget-pass">Quên mật khẩu?</a>
+            </div>
+            <div class="sign-up">
+                <p>Nếu bạn chưa có tài khoản vui lòng <a href="/register">ĐĂNG KÝ</a></p>
+            </div>
+        </form>
+    </div>
+</div>

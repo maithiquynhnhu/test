@@ -1,0 +1,98 @@
+
+    <div class="dashboard-admin">
+        <div class="nav-menu">
+            <div class="row" >
+                <div class="icon-user">
+                    <img src="/img/admin/home.png" alt="">
+                </div>
+                <div class="admin"><a href="/">Sweet Bakery</a></div>
+            </div>
+            <div class="list-control">
+                <ul>
+                    <li id="edit-product">Sửa sản phẩm</li>               
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <!--Thêm sản phẩm ở đây nè-->
+            <!--------------------------->
+
+            <!-- sửa sản phẩm -->
+            <div class="page-edit-product">
+                <!--Anh copy bài cũ qua từ đây nhé-->
+                <!----------------------------------->
+                <div class="admin-title">
+                    <p>SỬA SẢN PHẨM</p>
+                </div>
+                <form action="/admin/edit/<%= cake.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="add-product">
+                    <div class="row">
+                        <label style="line-height:35px; font-size: 18px; font-weight: 600;width:18.5%;" for="name-product;">Thêm sản phẩm:</label>
+                        <input class="input" type="text" value="<%= cake.TENSANPHAM %> " name="tensanpham" readonly>
+                    </div>
+                    <div class="row">
+                        <div class="price">
+                            <div class="row">
+                                <label style="width: 37.5%; line-height:25px; font-size: 18px; font-weight: 600;" for="name-product">Giá bán thường:</label>
+                                <input class="price-input"  placeholder="<%= cake.GIA %> " type="text" name="gia">
+                                <p class="vnd">VNĐ</p>
+                            </div>
+                            <div class="row">
+                                <label style=" width: 37.5%;line-height:25px; font-size: 18px; font-weight: 600;" for="name-product">Giá khuyến mãi:</label>
+                                <input class="price-input" placeholder="<%= cake.GIAKHUYENMAI %>" type="text" name="giakhuyenmai">
+                                <p class="vnd">VNĐ</p>
+                            </div>
+                            <div class="row">
+                                <label style=" width: 39%;line-height:25px; font-size: 18px; font-weight: 600;" for="name-product">Số lượng:</label>
+                                <input class="quantity-input"  placeholder="<%= cake.SOLUONG %>" type="text" name="soluong">
+                            </div>
+                            <div class="row">
+                                <p style="width: 40%; line-height:25px; font-size: 18px; font-weight: 600;">Phân loại</p>
+                                <div class="classify" style='display:flex; flex-wrap: wrap; width: 60%;'>
+                                    <div class="row"  style='width: 50%;'>
+                                       <input type="checkbox" name="phanloai"  value="Tiramisu" id=""  style='width: 30%;'>
+                                        <label for="tiramisu" style='font-size: 14px; width: 70%;'>Tiramisu</label> 
+                                    </div>
+                                    <div class="row" style='width: 50%;'>
+                                        <input type="checkbox" name="phanloai"  value="Cheesecake" id="" style=' width: 30%;'>
+                                        <label for="cheesecake" style='font-size: 14px;width: 70%;' >Cheesecake</label>
+                                    </div>
+                                    <div class="row" style='width: 50%;'>
+                                        <input type="checkbox" name="phanloai" value="Birthdaycake" id="" style=' width: 30%;'>
+                                        <label for="birdaycake" style='font-size: 14px;width: 70%;' >Bánh sinh nhật</label>
+                                    </div>
+                                    <div class="row" style='width: 50%;'>
+                                        <input type="checkbox" name="phanloai" value="Macaron"  id="" style=' width: 30%;'>
+                                        <label for="macaron" style='font-size: 14px;width: 70%;' >Macaron</label>
+                                    </div>
+                                    
+                                </div>
+                                <div class="btn-add-classify" style="text-align: center;width: 100%;">
+                                    <button class="add-classify">+Thêm phân loại</button>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="add-img">
+                            <div class="upload-price">
+                                <div class="upload-title"><p>Ảnh sản phẩm</p></div>
+                                <input type="file" name="image" src="" alt="" class="add-image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description">
+                            <label style=" line-height:25px; font-size: 18px; font-weight: 600;" for="description">Mô tả sản phẩm:</label>
+                            <textarea name="mota" placeholder="<%= cake.MOTA %> " id="" cols="30" rows="10" style="width:100%;border: 1px solid #B4B4B4;"></textarea>
+                    </div>
+                    <button type="submit" class="btn-add">Sửa sản phẩm</button>
+                </form>
+                <!--Đến đây nè-->
+            </div>
+            <!--Doanh thu ở đây nè-->
+
+            <!--Duyệt đơn hàng-->
+
+            <!--Danh sách sản phẩm-->
+            <!---------------------->
+        </div>
+    </div>

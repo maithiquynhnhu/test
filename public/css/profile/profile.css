@@ -1,0 +1,119 @@
+.clear{
+    clear: both;
+}
+.img-profile{
+    background-color: rgb(216, 104, 0);
+    padding: 3%;
+    border-radius: 50%;
+}
+.content{
+    padding: 1% 5%;
+    background-color: rgba(221, 221, 221, 0.548);
+}
+.img-profile img{
+    width: 100%;
+}
+.name-user{
+    padding: 10% 5%;
+    font-size: 18px;
+    font-family: WorkSansB;
+}
+.user-inf{
+    border-bottom: 0.5px #ccc solid;
+}
+.icon-account,
+.icon-order{
+    font-size: 24px;
+    color: rgb(134, 62, 4);
+    padding-right: 20px;
+}
+.inf-account p,
+.inf-order p{
+    /* margin-top: 20px; */
+    line-height: 55px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+.inf-account,
+.inf-order{
+    border-bottom: 0.5px #ccc solid;
+}
+.inf-title p{
+    font-size: 26px;
+    font-weight: 600;
+}
+.inf-title{
+    border-bottom: 0.5px #ccc solid;
+    padding: 2%;
+    margin: 1% 5%;
+}
+.input-edt-information{
+    width: 65%;
+    height: 35px;
+    margin-left: 20px;
+    border-radius: 0;
+    border: 0.5px rgb(187, 187, 187) solid;
+    padding: 10px;
+    font-size: 16px;
+}
+.input-gender{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.btn-save{
+    text-align: center;
+}
+.btn-save button{
+    width: 70px;
+    height: 35px;
+    margin-top: 40px;
+    font-size: 18px;
+    border-radius: 0;
+    border: none;
+    background-color: rgb(185, 90, 0);
+    color: #fff;
+}
+.user-information{
+    display: none;
+}
+.frame{
+    width: 5vw;
+    height: 5vw;
+    overflow: hidden;
+}
+.frame .img-product{
+    width: 150%;
+}
+.frame .img-product img{
+    width: 100%;
+}
+.list-order{
+    margin: 1% 5%;
+}
+table tr{
+    padding: 2%;
+
+}
+table{
+    width: 100%;
+}
+.review{
+    text-align: right;
+}
+.review button{
+    width: 120px;
+    height: 35px;
+    border:  1px solid;
+    color: rgb(155, 70, 0);
+    font-size: 16px;
+    background-color: #fff;
+}
+.order-member{
+    padding-bottom: 20px;
+    padding-top: 14px;
+    border-bottom: 0.5px rgb(187, 187, 187) solid;
+}
+.content-profile{
+    background-color: #fff;
+}

@@ -1,0 +1,127 @@
+@font-face{
+    src:url(../../css/font/font-work-sans/WorkSans-Bold.otf);
+    font-family: WorkSansB;
+}
+.logo-home{
+    width: 6%;
+}
+.logo-home img{
+    width: 100%;
+}
+#first-header{
+    padding: 0 5%;
+}
+.btn-header{
+    padding-top: 2%;
+}
+.name-store p{
+    display: inline;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 14px;
+}
+.name-store {
+    padding-top: 2%;
+}
+
+#content {
+    margin-top: 4%;
+}
+.form-login{
+    width: 60%;
+    margin: 0 auto;
+    padding: 3% 6%;
+    text-align: center;
+    background: #FFEBD8;
+}
+.title{
+    font-size: 36px;
+    color: #C2431B;
+    font-family: WorkSansB;
+    margin-bottom: 20px;
+}
+.form-input{
+    width: 100%;
+    border-radius: 10px;
+    height: 44px;
+    padding-left: 8px;
+    border:none;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    font-size: 18px;
+
+}
+.form-input::placeholder{
+    font-weight: 600;
+    font-size: 18px;
+    color: #B4B4B4;
+}
+.btn-sign-in{
+    width: 169px;
+    height: 46px;
+    background: #A34E1E;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+    color: #FFFFFF;
+    padding-top: 3px;
+
+}
+.forget-pass,
+.sign-up,
+.sign-up a
+{
+    font-size: 18px;
+    color: rgba(194, 67, 27, 0.7);
+    font-weight: bolder;
+}
+.sign-up a:hover{
+    font-family: WorkSansB;
+}
+.forget-password{
+    padding-top: 10px;
+
+}
+#footer{
+    top: 40px;
+}
+@media (max-width: 767px){
+    .title {
+        font-size: 26px;
+    }
+    .form-login {
+        width: 84%;
+    }
+    .forget-pass, .sign-up, .sign-up a {
+        font-size: 14px;
+    }
+    .btn-sign-in {
+        width: 159px;
+        height: 40px;
+        font-size: 16px;
+    }
+    #content {
+        margin-top: 10%;
+    }
+    .contact, .follow-me,.menu-footer,.map{
+        margin-bottom: 20px;
+    }
+
+    .full-width{
+        width: 100%;
+    }
+    .logo-home {
+        width: 60px;
+    }
+    .name-store p {
+        display: none;
+    }
+    #footer .title-footer {
+        font-size: 22px;
+    }
+    .menu-footer ul li {
+        font-size: 17px;
+    }
+}

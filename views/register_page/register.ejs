@@ -1,0 +1,20 @@
+<!-- form đăng ký user với action post lên /register  -->
+    <div id="content">
+        <div class="form-login">
+            <div class="title">ĐĂNG KÝ THÀNH VIÊN</div>
+            <form action="/register" method="POST" id="form-login">
+                <input class="form-input" type="text" name="hoten" placeholder="Họ và tên" id="name" required>
+                <input class="form-input" type="text" name="sdt" placeholder="Số điện thoại" id="sdt" required>
+                <input class="form-input" type="email" name="email" placeholder="Email" id="mail" required>
+                <input class="form-input" type="text" name="username" placeholder="Tên đăng nhập" id="user" required>
+                <input class="form-input" type="password" name="password" placeholder="Mật khẩu" id="pwd" required>
+                <input class="form-input" type="password" name="repwd" placeholder="Nhập lại mật khẩu" id="repwd" required>
+                <div class="check-agree">
+                    <input type="checkbox" name="agree-checkbox" id="agree-checkbox">
+                    <label for="agree-checkbox">Tôi đồng ý với tất cả <a href="">Điều khoản khách hàng</a></label>
+                </div>
+                <input class="btn-sign-in" type="submit" value="ĐĂNG KÝ">
+            </form>
+        </div>
+    </div>
+    <!--footer-->

@@ -1,0 +1,129 @@
+
+    <!--Phần dùng chung-->
+    <!------------------->
+    <div class="content">
+        <div class="nav-profile col" style="width: 20%;">
+            <div class="user-inf">
+                <div class="img-profile col" style="width: 25%;">
+                <img src="/img/profile/user.png" alt="">
+                </div>
+                <p class="name-user col" style="width:75%;" ><%= user.HOTEN %> </p>
+                <div class="clear"></div>
+            </div>
+            <div class="inf-account">
+                <p><i class="fa fa-user icon-account"></i>Tài khoản của tôi</p>
+            </div>
+            <div class="inf-order" >
+                <p><i class="fa fa-file-text-o icon-order"></i>Thông tin đơn hàng</p>
+            </div>
+        </div>
+        <div class="content-profile col" style="width: 80%;">
+            <div class="user-information">
+                <div class="inf-title">
+                <p>Hồ sơ của tôi</p>
+                </div>
+                <div class="edit-information" style="margin-top: 40px;">
+                    <div class="name-user-edit" style="display:flex"><p style="width:20%; text-align: right; line-height: 35px;">Tên</p><input type="text" class="input-edt-information" value="<%= user.HOTEN %>"></div>
+                </div>
+                <div class="edit-information" style="margin-top: 40px;">
+                    <div class="email" style="display:flex"><p style="width:20%; text-align: right; line-height: 35px;">Email</p><input type="text" class="input-edt-information" value="<%= user.EMAIL %>"></div>
+                </div>
+                <div class="edit-information" style="margin-top: 40px;">
+                    <div class="sdt" style="display:flex"><p style="width:20%; text-align: right; line-height: 35px;">Số điện thoại</p><input type="text" class="input-edt-information" value="<%= user.SDT %>"></div>
+                </div>
+                <div class="edit-information" style="margin-top: 40px;">
+                    <div class="diachi" style="display:flex"><p style="width:20%; text-align: right; line-height: 35px;">Địa chỉ</p><input type="text" class="input-edt-information" value="<%= user.DIACHI %>"></div>
+                </div>
+                <div class="edit-information" style="margin-top: 40px;">
+                    <div class="gender" style="display:flex"><p style="width:20%; text-align: right; line-height: 35px;">Giới tính</p>
+                        <input class="input-gender" type="radio" name="male" id="">
+                        <label for="male" style="margin-top:10px;">Nam</label>
+                        <input class="input-gender" type="radio" name="female" id="">
+                        <label for="female" style="margin-top:10px;">Nữ</label>
+                    </div>
+                </div>
+                <div class="edit-information" style="margin-top: 40px;">
+                    <div class="sdt" style="display:flex"><p style="width:20%; text-align: right; line-height: 35px;">Ngày sinh</p><input type="text" class="input-edt-information" value="02/04/2000"></div>
+                </div>
+                <div class="btn-save">
+                    <button>Lưu</button>
+                </div>
+            </div>
+            <div class="order-information">
+                <div class="inf-title">
+                    <p>Đơn hàng của tôi</p>
+                </div>
+                <div class="list-order">
+                    <div class="order-member">
+                         <table>
+                        <tr>
+                            <td style="width: 10%;">
+                                <div class="frame">
+                                    <div class="img-product">
+                                        <img src="/img/profile/cafe-3.jpg" alt="">
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="width: 80%;">
+                                <p class="name-cake-order" style="font-weight: 600;font-size: 20px;">Bánh Cheesecake Cà phê</p>
+                                <p class="classify">Phân loại:Chessecake</p>
+                                <p class="quantity">Số lượng:1</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 10%;">
+                                <div class="frame">
+                                    <div class="img-product">
+                                        <img src="/img/profile/cafe-3.jpg" alt="">
+                                    </div>
+                                </div>
+                            </td>
+                            <td style="width: 80%;">
+                                <p class="name-cake-order" style="font-weight: 600;font-size: 20px;">Bánh Cheesecake Cà phê</p>
+                                <p class="classify">Phân loại:Chessecake</p>
+                                <p class="quantity">Số lượng:1</p>
+                            </td>
+                        </tr>
+                            
+                        </table>
+                        <div class="review"><button>Xem đánh giá</button></div>
+                    </div>
+                    <div class="order-member">
+                        <table>
+                       <tr>
+                           <td style="width: 10%;">
+                               <div class="frame">
+                                   <div class="img-product">
+                                       <img src="/img/profile/cafe-3.jpg" alt="">
+                                   </div>
+                               </div>
+                           </td>
+                           <td style="width: 80%;">
+                               <p class="name-cake-order" style="font-weight: 600;font-size: 20px;">Bánh Cheesecake Cà phê</p>
+                               <p class="classify">Phân loại:Chessecake</p>
+                               <p class="quantity">Số lượng:1</p>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td style="width: 10%;">
+                               <div class="frame">
+                                   <div class="img-product">
+                                       <img src="/img/profile/cafe-3.jpg" alt="">
+                                   </div>
+                               </div>
+                           </td>
+                           <td style="width: 80%;">
+                               <p class="name-cake-order" style="font-weight: 600;font-size: 20px;">Bánh Cheesecake Cà phê</p>
+                               <p class="classify">Phân loại:Chessecake</p>
+                               <p class="quantity">Số lượng:1</p>
+                           </td>
+                       </tr>
+                           
+                       </table>
+                       <div class="review"><button>Xem đánh giá</button></div>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Bakery</title>
+    <link href="img/header-footer/sweet-bakery (2).png" rel="icon">
+    <!-------------thêm các thư viện chung--------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/amination/aos/aos.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+    <script src="css/amination/aos/aos.js"></script>
+    <!-------------thêm các thư viện chung--------------------------------->
+    <link rel="stylesheet" href="css/footer/footer.css">
+    <link rel="stylesheet" href="css/header/header.css">
+    <%- css  %> 
+</head>
+<body>
+    <!-------------------------Header------------------------------>
+    <!--**********************************Phần dùng chung**************************************************-->
+    <div id="first-header">
+        <div class="time-open-close col">
+            <p class="time-open">OPEN TIME: 8:00 am</p>
+            <p class="time-close">CLOSE TIME: 8:00 pm</p>
+        </div>
+
+         <% if (authStatus == 1) { %>
+            <div class="navbar">
+                <div class="dropdown">
+                    <button class="dropbtn">Hi <%= username %>
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/admin">admin</a>
+                        <a href="/profile/<%= user.id %> ">profile</a>
+                        <a href="/follow_order">follow_order</a>
+                        <form  action="/logout?_method=DELETE" method="POST">
+                            <button id="logoutbtn" type="submit">Log Out</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            
+         <% } else { %>
+            <div class="btn-header ">
+                <a href="/login" class="login">
+                    <button class="btn-log-in">Đăng nhập</button>
+                </a>
+                <a href="/register">
+                    <button class="btn-log-up">Đăng kí </button>
+                </a>
+            </div>
+        <% } %>
+         
+        <div class="user">
+            <img src="img/header-footer/user.png" alt="">           
+        </div>
+        <div class="clear"></div>
+    </div>
+    <%- body %>
+    
+    <div id="footer">
+        <div class="contact full-width col">
+            <p class="title-footer">Liên hệ</p>
+            <ul class="inf-contact">
+                <li>Gmail: sweetbakery@gmail.com</li>
+                <li>Địa chỉ: 22 Trần Thị Nghĩa, Gò Vấp, TPHCM</li>
+                <li>SDT: 0706811338</li>
+            </ul>
+        </div>
+        <div class="follow-me full-width col">
+            <p class="title-footer">Follow me</p>
+            <div class="icon-society">
+                <img src="img/header-footer/facebook.png" alt="" class="icon">
+                <img src="img/header-footer/instagram.png" alt="" class="icon">
+                <img src="img/header-footer/youtube.png" alt="" class="icon">
+            </div>
+        </div>
+        <div class="menu-footer full-width col">
+            <ul>
+                <li><a href="/menu">MENU</a></li>
+                <li><a href="/about">ABOUT US</a></li>
+                <li><a href="/blog">BLOG</a</li>
+                <li><a href="/event">SỰ KIỆN</a> </li>
+            </ul>
+        </div>
+        <div class="map full-width col">
+            <!-- <img src="../layout/img/map.png" alt=""> -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.794501332877!2d106.67857831395155!3d10.827032561220218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528fc152bbcc1%3A0xce77b7dba4d9b9!2zMjIgVHLhuqduIFRo4buLIE5naOG7iSwgUGjGsOG7nW5nIDcsIEfDsiBW4bqlcCwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1620368741950!5m2!1svi!2s" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <!--------------------------------------phần dùng chung------------------------------------------------->
+   <%- script %> 
+</body>
+</html>

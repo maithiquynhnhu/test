@@ -1,0 +1,503 @@
+html{
+    font-family: WorkSans;
+}
+.icon-menu{
+    display: none;
+}
+#nav-banner{
+    background-image: url(../../img/product/banner.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.content-banner h1{
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding-top: 20%;
+    font-size: 68px;
+    font-family: WorkSansB;
+    letter-spacing: 4px;
+}
+.breadcrumb{
+   
+}
+.breadcrumb a{
+    font-size: 14px;
+    color: rgb(124, 124, 124);
+    text-decoration: none;
+}
+a.active{
+    color: #000;
+}
+#content{
+    width: 90%;
+    margin: auto;
+    margin-top: 2%;
+    overflow: hidden;
+}
+.title-product{
+    text-align: center;
+    font-size: 36px;
+    color: #CF6400;
+    font-family: WorkSansB;
+    margin-bottom: 5vw;
+}
+.frame-img{
+    width: 30vw;
+    height: 28vw;
+    margin: auto;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    object-fit: cover;
+}
+.frame-img img{
+    width: 100%;
+    height: 100%;
+}
+.row{
+    display: flex;
+    padding-top: 16px;
+}
+.name-cake{
+    width: 50%;
+    text-align: left;
+    font-size: 22px;
+    color: #DC822F;
+    font-family: WorkSansB;
+}
+.price-cake{
+    width: 50%;
+    text-align: right;
+    font-size: 20px;
+    color: #FF0000;
+    font-family: WorkSansB;
+}
+.price-old{
+    text-align: right;
+    color: rgb(155, 155, 155);
+    text-decoration: line-through;
+    width: 83%;
+    font-size: 18px;
+}
+.phan-loại{
+    font-weight: 700;
+    width: 17%;
+}
+.description{
+    text-align: justify;
+    padding-top: 20px;
+    font-weight: 700;
+}
+.detail-inf-product{
+    padding-right: 3vw;
+}
+#quantity-product{
+    width: 60px;
+}
+.btn-buy{
+    text-align: center;
+}
+.btn-buy button{
+    width: 150px;
+    height: 37px;
+    background: #FF0000;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    font-family: WorkSansB;
+    font-size: 15px;
+}
+.inf-product{
+    padding-bottom: 5%;
+    border-bottom: 1px solid #FF8A00;;
+}
+.list-product{
+    margin:40px 2%;
+}
+.produce-member{
+    width: 19%;
+    margin:0 3%;
+    background: #F5EDE7;
+    position: relative;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+}
+.img-containt{
+    height: 160px;
+    position: relative;
+    overflow: hidden;
+}
+.produce-member img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+}
+.sale {
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    padding-top: 18px;
+    border-radius: 50%;
+    color: #ffeb2c;
+    position: absolute;
+    right: -25px;
+    top: -25px;
+    z-index: 99;
+    background: #FF5858;
+    cursor: pointer;
+}
+.sale:hover{
+    font-size: 26px;
+    text-shadow: 0 0 6px #ffffff;
+    transition: 1s;
+    padding-top:12px;
+    cursor: pointer;
+
+}
+.name-sp{
+    font-family: WorkSansB;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: center;
+    color: rgba(145, 43, 0, 0.97);
+    padding: 8px 60px;
+    border-bottom: 2px solid #f9d3a786;
+    height: 64px;
+}
+.price{
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 20px;
+}
+.price p{
+    display: inline;
+}
+.price-new {
+    float: right;
+    color: #FF3D00;
+    font-size: 20px;
+    font-weight: 600;
+}
+.price-old{
+    text-decoration-line: line-through;
+    font-size: 18px;
+    color: #9E9E9E;
+}
+.button-order {
+    width: 40%;
+    margin: 10px auto;
+}
+.btn-order{
+    width: 100%;
+    height: 30px;
+    background-color: #ED1E1E;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: WorkSansB;
+    letter-spacing: 2px;
+}
+.btn-order:hover{
+    background-color: #4b0000;
+}
+.contain-menu-title{
+    margin-top: 20px;
+    font-size: 30px;
+    font-family: WorkSansB;
+    padding: 20px 5%;
+    padding-bottom: 10px;
+    color: #CF6400;
+}
+/*Responsive*/
+@media (min-width:1024px) and (max-width: 1200px){
+    .cart {
+        width: 2%;
+        margin-top: 3%;
+    }
+    .list-menu li a {
+        margin: 4px 8px;
+        font-size: 19px;
+    }
+    .nav-menu {
+        width: 57%;
+        padding-left: 6%;
+        margin-top: 3%;
+    }
+    #nav-banner {
+        height: 100vh;
+    }
+    .name-sp {
+        padding: 8px 12px;
+    }
+    .price-new {
+        color: #FF3D00;
+        font-size: 16px;
+    }
+    .price-old {
+        font-size: 16px;
+    }
+    .img-containt {
+        height: 124px;
+    }
+    .name-sp {
+        font-size: 20px;
+    }
+}
+@media (min-width:992px) and (max-width:1023px){
+    .cart {
+        width: 2%;
+        margin-top: 2%;
+    }
+    .list-menu li a {
+        margin: 4px 6px;
+        font-size: 19px;
+    }
+    .nav-menu {
+        width: 57%;
+        padding-left: 6%;
+        margin-top: 2%;
+    }
+    .content-banner {
+        left: 6%;
+    }
+    .search-cell {
+        top: 16px !important;
+    }
+    ::placeholder{
+        font-size: 10px;
+    }
+    #nav-banner {
+        height: 100vh;
+    }
+    .name-sp {
+        padding: 8px 12px;
+        font-size: 18px;
+        line-height: 20px;
+        height: 54px;
+    }
+    .price-new {
+        color: #FF3D00;
+        font-size: 16px;
+    }
+    .price-old {
+        font-size: 16px;
+    }
+    .img-containt {
+        height: 132px;
+    }
+    .price {
+        padding-top: 8px;
+    }
+}
+@media (min-width:768px) and (max-width:991px){
+    .cart {
+        width: 2%;
+        margin-top: 3%;
+    }
+    .list-menu li a {
+        margin: 4px 6px;
+        font-size: 14px;
+    }
+    .nav-menu {
+        width: 57%;
+        padding-left: 6%;
+        margin-top: 3%;
+    }
+    
+    .search-cell {
+        top: 16px !important;
+    }
+    ::placeholder{
+        font-size: 10px;
+    }
+    #first-header {
+        font-size: 12px;
+    }
+    .btn-header button {
+        width: 87px;
+        color: #fff;
+        font-weight: 400;
+        font-size: 12px;
+        background-color: #493129;
+        border: #fff 1px solid;
+        padding: 2px 8px;
+        padding-top: 2px;
+    }
+    .time-open-close {
+        margin-top: 4px;
+    }
+    .content-banner h1 {
+        font-size: 48px;
+    }
+    .classify-cake {
+        font-size: 14px;
+    }
+    #nav-banner {
+        height: 70vh;
+    }
+    .haft-width{
+        width: 43%;
+    }
+    .img-containt {
+        height: 182px;
+    }
+    .produce-member {
+        margin: 18px 3%;
+    }
+    /*footer*/
+    #footer .title-footer {
+        font-size: 22px;
+    }
+    .inf-contact {
+        font-size: 10px;
+        letter-spacing: 0.7px;
+    }
+    .follow-me img {
+        width: 26px;
+    }
+    .menu-footer ul li {
+        font-size: 16px;
+    }
+    .map iframe {
+        width: 100%;
+        height: 166px;
+    }   
+    .btn-buy{
+        margin-top: 20px;
+    } 
+}
+
+@media (max-width: 767px){
+    .list-menu li{
+        display: block;
+        padding: 10px;
+        border-bottom: rgba(158, 158, 158, 0.63) 0.4px solid;
+    }
+    .list-menu li:hover{
+        background-color: rgba(170, 170, 170, 0.575);
+    }
+    .list-menu li a{
+        font-size: 14px;
+        margin: 4px 0px
+    }
+    .nav-menu {
+        padding: 10px;
+        width: 34%;
+        position: absolute;
+        top:16px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.7);;
+    }
+    .search-input {
+        
+        padding: 2px 2px;
+    }
+    .full-width{
+        width: 80%;
+    }
+    #first-header{
+        font-size: 10px;
+    }
+    .time-open-close p{
+        margin-right: 7px;
+    }
+    .btn-header button {
+        width: 57px;
+        font-size: 8px;
+        padding: 1px 7px;
+        padding-top: 2px;
+    }
+    .nav-menu{
+        display: none;
+        height: 100vh;
+        width: 50vw;
+        margin: 0;
+        padding: 0;
+    }   
+    
+    .search-cell {
+        top: 0px !important;
+        width: 30%;
+    }
+    ::placeholder{
+        font-size: 8px;
+    }
+    .img-search {
+        width: 12px;
+        right: 0;
+        bottom: 5px;
+    }
+    .sweet-header{
+        font-size: 80px;
+    }
+    .cart {
+        position: absolute;
+        right: 26px;
+    }
+    .icon-menu{
+        position: absolute;
+        top: 8px;
+        right: 7px;
+        font-size: 12px;
+        color: rgb(216, 215, 215);
+    }
+    .icon-close{
+        display: none;
+    }
+    .icon-open{
+        display: block ;
+    }
+    .classify-cake{
+        font-size: 8px;
+    }
+    .content-banner h1 {
+        font-size: 32px;
+    }
+    .nav-menu-cake {
+        padding: 12px;
+    }
+    #nav-banner {
+        height: 66vh;
+    }
+    #content {
+        margin-top: 40px;
+    }
+    .menu-title {
+        font-size: 25px;
+    }
+    .produce-member{
+        margin:4% 10%;
+    }
+    .img-containt {
+        height: 190px;
+    }
+    .contact, .follow-me,.menu-footer,.map{
+        margin-bottom: 20px;
+    }
+    .price-old {
+
+        font-size: 24px;
+    }
+    /*---------*/
+    .row{
+        padding-top: 2px;
+    }
+    .name-cake,
+    .price-cake,
+    .phan-loai,
+    .price-old,
+    .description,
+    .quantity{
+        font-size: 12px;
+        padding-top: 2px;
+    }
+    .btn-buy button {
+        width: 64px;
+        height: 24px;
+        font-size: 10px;
+        margin-top: 11px;
+    }
+}

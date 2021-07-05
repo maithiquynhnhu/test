@@ -1,0 +1,169 @@
+
+<div id="nav-banner">
+    <sticknav>
+        <!-- (Đoạn code của navigation bar ở đây) -->
+        <div class="nav">
+            <a href="/">
+                <img src="/img/header-footer/sweet-bakery (2).png" alt="" class="img-logo col">
+            </a>
+            <form action="" id="search" class="search-cell col">
+                <input class="search-input" type="text" placeholder="Bạn muốn tìm gì nè...">
+                <input class="img-search" type="image" src="/img/header-footer//img/magnifying-glass.png" alt="">
+            </form>
+            <div class="nav-menu col">
+                <ul class="list-menu">
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/about">ABOUT US</a></li>
+                    <li><a href="/menu">MENU</a></li>
+                    <li><a href="/blog">BLOG</a></li>
+                    <li><a href="/event">EVENT</a></li>
+                    <li><a href="/contact">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-navicon icon-menu icon-open"></i>
+            <i class="fa fa-close icon-menu icon-close"></i>
+
+            <div class="cart col">
+                <a href="/cart">
+                    <img src="/img/header-footer/trolley (1).png" alt="" class="img-cart"><span id="numgiohang" style=""></span>
+                </a>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+    </sticknav>
+    <div class="content-banner" data-aos="fade-up" data-aos-delay="100"  data-aos-duration="1000">
+        <h1>PRODUCT</h1>
+    </div>
+    </div>
+</div>
+<!-------------------------------end dùng chung-------------------->
+<div id="content">
+    <div class="breadcrumb">
+        <a href="/home">Trang chủ</a> <span>></span>
+        <a href="/menu">Menu</a> <span>></span>
+        <a href="/product" class="active">Sản phẩm</a>
+    </div>
+    <div class="title-product" data-aos="fade-right" data-aos-delay="100"  data-aos-duration="1000"><p>THÔNG TIN SẢN PHẨM</p> </div>
+    <div class="inf-product">
+
+        <div class="img-product col two-col"data-aos="fade-right" data-aos-delay="100"  data-aos-duration="1000">
+            <div class="frame-img" >
+                <img name="IMGMAIN" src="data:image/png;base64,<%= cake.IMAGE %>" alt="">
+            </div>
+        </div>
+        <div class="detail-inf-product col two-col"data-aos="fade-left" data-aos-delay="100"  data-aos-duration="1000">
+
+            <div class="row">
+
+                <div class="name-cake" ><p name="TENSANPHAMMAIN" ><%=  cake.TENSANPHAM %> </p> </div>
+                <div class="price-cake" ><p name="GIAMAIN"><%= cake.GIAKHUYENMAI %></p> <p name="IDSPMAIN" style="display: none;"><%= cake.IDSP %></p> </div>
+            </div>
+            <div class="row">
+                <p class="phan-loai">Loại: <span name="PHANLOAIMAIN"><%= cake.PHANLOAI %></span></p>
+                <p class="price-old"><%= cake.GIA %></p>
+            </div>
+            <p class="description"><%= cake.MOTA %></p>
+           
+                <div class="row">
+                <p class="quantity">Số lượng: </p>
+                <input type="number" name="SOLUONG" id="quantity-product" value="1" >
+            </div>
+            <div class="btn-buy">
+                <button class="btn-order-main" onclick="addctgiohangmain('TENSANPHAMMAIN','IDSPMAIN','GIAMAIN','PHANLOAIMAIN','data:image/png;base64,<%= cake.IMAGE %>')" >MUA NGAY</button>
+            </div>    
+        </div>
+        <div class="clear"></div>
+        </div>
+    <div class="introduct-product">
+        <div class="contain-menu-title" >
+            <p class="menu-title">Có thể bạn sẽ thích</p>
+        </div>
+        <div class="list-product"data-aos="fade-right" data-aos-delay="100"  data-aos-duration="1000">
+            <div class="produce-member col haft-width  full-width">
+                <div class="sale">
+                    <p>50%</p>
+                </div>
+                <div class="img-containt">
+                    <img name="IMG-1" src="/img/menu/Sweat-bakery-cheesecake-cherry.png" alt="" class="img-produce">
+                </div>
+                <p NAME="TENSANPHAM-1" class="name-sp">Cheesecake Cherry</p>
+                <div class="price">
+                    <p class="price-old">40.000</p>
+                    <p class="price-new" NAME="GIA-1">20.000</p>
+                </div>
+                <div class="button-order">
+                    <button class="btn-order" onclick="addctgiohang('/img/menu/Sweat-bakery-cheesecake-cherry.png','TENSANPHAM-1','GIA-1')">ĐẶT</button>
+                </div>
+            </div>
+            <div class="produce-member col haft-width  full-width">
+                <div class="sale">
+                    <p>50%</p>
+                </div>
+                <div class="img-containt">
+                    <img NAME="IMG2" src="/img/menu/blueberry-1.jpg" alt="" class="img-produce">
+                </div>
+                <p class="name-sp" NAME="TENSANPHAM-2">Cheesecake Blueberry</p>
+                <div class="price">
+                    <p class="price-old">40.000</p>
+                    <p class="price-new" NAME="GIA-2">20.000</p>
+                </div>
+                <div class="button-order">
+                    <button class="btn-order" onclick="addctgiohang('/img/menu/blueberry-1.jpg','TENSANPHAM-2','GIA-2')">ĐẶT</button>
+                </div>
+            </div>
+            <div class="produce-member col haft-width  full-width">
+                <div class="sale">
+                    <p>50%</p>
+                </div>
+                <div class="img-containt">
+                    <img name="IMG3" src="/img/menu/MATCHA-2.jpg" alt="" class="img-produce">
+                </div>
+                <p class="name-sp" name="TENSANPHAM-3">Cheesecake trà xanh</p>
+                <div class="price">
+                    <p class="price-old">40.000</p>
+                    <p class="price-new" name="GIA-3">20.000</p>
+                </div>
+                <div class="button-order">
+                    <button class="btn-order" onclick="addctgiohang('/img/menu/MATCHA-2.jpg','TENSANPHAM-3','GIA-3')">ĐẶT</button>
+                </div>
+            </div>
+            <div class="produce-member col haft-width  full-width">
+                <div class="sale">
+                    <p>50%</p>
+                </div>
+                <div class="img-containt">
+                    <img name="IMG4" src="/img/menu/socola.jpg" alt="" class="img-produce">
+                </div>
+                <p class="name-sp" name="TENSANPHAM-4">Cheesecake Socola</p>
+                <div class="price">
+                    <p class="price-old">40.000</p>
+                    <p class="price-new" name="GIA-4">20.000</p>
+                </div>
+                <div class="button-order">
+                    <button class="btn-order" onclick="addctgiohang('/img/menu/MATCHA-2.jpg','TENSANPHAM-4','GIA-4')">ĐẶT</button>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="/js/product/product.js"></script>
+<script>
+    $(document).ready(function() {
+        AOS.init();
+    });
+</script>
+<!-- Xét số lượng sản phẩm cho giỏ hàng -->
+<script>
+var car= localStorage.getItem('soluong');
+if(car!=null){document.getElementById('numgiohang').innerHTML=car;}else{
+    document.getElementById('numgiohang').innerHTML=0;
+}
+
+
+</script>

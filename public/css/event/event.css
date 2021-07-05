@@ -1,0 +1,277 @@
+#nav-banner{
+    position: relative;
+}
+.banner{
+    
+    top:0;
+    width: 100%;
+    z-index: 1;
+}
+
+/*slideshow banner*/
+.slideshow-container {
+    position: relative;
+    top:0;
+}
+  /* Ẩn các slider */
+.mySlides {
+    display: none;
+} 
+  /* định dạng các chấm chuyển đổi các slide */
+.dot,
+.dot-rv {
+    cursor:pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: rgba(221, 155, 117, 0.534);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+  /* khi được hover, active đổi màu nền */
+.active, .dot:hover,
+.dot-rv:hover
+ {
+    background-color: #717171;
+}
+.btn-slide{
+    position: absolute;
+    bottom: 32px;
+    left: 50%
+}
+  /* Thêm hiệu ứng khi chuyển đổi các slide */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 5s;
+    animation-name: fade;
+    animation-duration: 5s;
+}
+   
+  @-webkit-keyframes fade {
+    from {opacity: .6} 
+    to {opacity: 1}
+  }
+   
+  @keyframes fade {
+    from {opacity: .6} 
+    to {opacity: 1}
+  }
+  .fade-rv {
+    -webkit-animation-name: fade-rv;
+    -webkit-animation-duration: 3s;
+    animation-name: fade-rv;
+    animation-duration: 3s;
+}
+   
+  @-webkit-keyframes fade-rv {
+    from{transform: translateX(-100%); opacity: 0;}
+    to{transform: translateX(0);opacity: 1;}
+  }
+   
+  @keyframes fade-rv {
+    from{transform: translateX(100%);opacity: 0;}
+    to{transform: translateX(0);opacity: 1;}
+  }
+/*banner*/
+.banner,
+.review-slide{
+    display: block;
+}
+.mySlides
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.img-bakery{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+/*chỉnh nền từng slide show*/
+#bakery,
+#voucher
+,#merry{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#bakery{
+    background-image: url('../../img/event/banner.png');
+}
+#voucher{
+    background-image: url('../../img//event/banner1.png');
+}
+#merry{
+    background-image: url('../../img//event/banner2.png');
+}
+.title-event{
+  font-size: 40px;
+  text-align: center;
+  color: #804106;
+  font-family: WorkSansB;
+  margin: 5% auto;
+}
+.new-product{
+  padding: 5% 8%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.new-product{
+  background: url('../../img/event/banner4.png');
+  background-attachment: fixed;
+}
+.img-new-product{
+  
+  padding-top: 5%;
+}
+.title-new-product p{
+  font-family: WorkSansB;
+  font-size: 38px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 4%;
+}
+.img-new-product img{
+  width: 100%; 
+}
+.name-cake-event{
+  font-weight: bold;
+  font-size: 34px;
+  color: #fff;
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 4%;
+}
+.decription-cake{
+  color: #fff;
+  font-size: 24px;
+  text-align: justify;
+}
+.infor-new-product{
+  padding-right: 5%;
+}
+.btn-more{
+  border: #fff 1px solid;
+  border-radius: 0;
+  height: 50px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0 18px;
+  margin-top: 8%;
+  font-size: 24px;
+}
+.title-event-interesting P{
+  font-size: 42px;
+  font-family: WorkSansB;
+  color: #804106;
+  text-align: center;
+  margin-top: 5%;
+  border-bottom: #804106 1px solid;
+}
+.event-col img{
+  width: 100%;
+  height: 100%;
+}
+.row{
+  display: flex;
+  padding: 4% 8%;
+
+}
+.img-event{
+  height: 25vw;
+}
+.btn-watch button{
+    border: none;
+    border-bottom: rgb(255, 0, 0) 1px solid;
+    background-color: #ffffff00;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 0;
+    padding: 0 10px;
+}
+.btn-watch{
+  text-align: right;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+#footer{
+  top:40px;
+}
+.mery-christmas,
+.VIP,
+.gift-voucher,
+.happy-birthday{
+  display: none;
+}
+
+.mery-christmas,
+.VIP,
+.gift-voucher,
+.happy-birthday{
+  width: 55%;
+  margin: auto;
+  position: absolute;
+  bottom: 50vw;
+  right: 22.5%;
+  z-index: 100;
+  background: #FFF5EA;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 3%;
+}
+body{
+  position: relative;
+}
+.inf-event-promotio{
+  font-size: 50px;
+  font-family: WorkSansB;
+  color: #C53434;
+  margin-bottom: 30px;
+}
+.p-bold{
+  color: #C56834;
+  font-family: WorkSansB;
+  font-size: 22px;
+}
+.p-light{
+  color: #C56834;
+  font-family: WorkSansB;
+  font-size: 15px;
+}
+#overr {
+  display: none;
+  background: #000;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: 99;
+}
+@media (min-width: 545px) and (max-width:768px){
+  .title-new-product p {
+    font-size: 28px;
+  }
+  .name-cake-event {
+    font-size: 25px;
+  }
+  .decription-cake {
+    font-size: 13px;
+  }
+}
+@media (max-width: 543px){
+  .full-width{
+    width: 100%;
+  }
+  .mery-christmas, .VIP, .gift-voucher, .happy-birthday {
+    width: 65%;
+    right: 18.5%;
+  }
+}
+button{
+  cursor: pointer;
+}

@@ -1,0 +1,46 @@
+   <div id="content">
+        <!------------------------------------------------------->
+        <!------------------------Khi chế độ nào được bật thì icon hoặc và chữ ở chỗ đó sẽ đổi màu--------------------------->
+        <div class="follow-order">
+        <div class="wait-confirm">
+            <i class=" fa fa-check-circle confirm"></i>
+            <p class="title-follow">Chờ xác nhận</p>
+        </div>
+        <span>-------------</span>
+        <div class="delivery">
+            <i class="	fa fa-truck delivery-icon"></i>
+            <p class="title-follow">Đang giao hàng</p>
+        </div>
+        <span>-------------</span>
+        <div class="received">
+            <i class=" 	fa fa-gift received-icon"></i>
+            <p class="title-follow">Đã nhận được hàng</p>
+        </div>
+        <span>-------------</span>
+        <div class="review-order-check">
+            <i class=" fa fa-star-o confirm"></i>
+            <p class="title-follow">Đánh giá</p>
+        </div>
+    </div>
+    <!-- khi chế độ Đã nhận được hàng được bật, thì class này mới hiện -->
+    <div class="confirm-received" style=" text-align:center">
+            <p>Khi đã nhận được hàng, vui lòng xác nhận với chúng tôi</p>
+            <button class="btn-received">Đã nhận được hàng</button>
+    </div>
+    <script>
+        $('.btn-received').click(function(){
+            $('.review-order').show();
+        })
+    </script>
+    <!--Khi nút "Đã nhận được hàng được xác nhận thì chỗ này mới hiện-->
+    <div class="review-order">
+        <div class="input-review-order">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Viết đánh giá"></textarea>
+        </div>
+        <div class="btn-send-review-order">
+            <button>Gửi</button>
+        </div>
+    </div>
+    </div>
+    
+    <!------------------Phần dùng chung------------------------->

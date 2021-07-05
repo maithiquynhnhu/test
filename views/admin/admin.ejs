@@ -1,0 +1,217 @@
+
+    <div class="dashboard-admin">
+        <div class="nav-menu">
+            <div class="row" >
+                <div class="icon-user">
+                    <img src="img/admin/home.png" alt="">
+                </div>
+                <div class="admin"><a href="/">Sweet Bakery</a></div>
+            </div>
+            <div class="list-control">
+                <ul>
+                    <li style="border-top: 0.5px solid #DEDEDE;" id="figure">Số liệu</li>
+                    <li id="view-order">Duyệt đơn hàng</li>
+                    <li id="add-product">Thêm sản phẩm</li>
+                    <li id="list-product">Danh sách sản phẩm</li>                   
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <!--Thêm sản phẩm ở đây nè-->
+            <!--------------------------->
+            <div class="page-add-product">
+                <!--Anh copy bài cũ qua từ đây nhé-->
+                <!----------------------------------->
+                <div class="admin-title">
+                    <p>THÊM SẢN PHẨM</p>
+                </div>
+                <form action="/admin/addproduct" method="POST" enctype="multipart/form-data" class="add-product">
+                    <div class="row">
+                        <label style="line-height:35px; font-size: 18px; font-weight: 600;width:18.5%;" for="name-product;">Thêm sản phẩm:</label>
+                        <input class="input" type="text" name="tensanpham">
+                    </div>
+                    <div class="row">
+                        <div class="price">
+                            <div class="row">
+                                <label style="width: 37.5%; line-height:25px; font-size: 18px; font-weight: 600;" for="name-product">Giá bán thường:</label>
+                                <input class="price-input"  type="text" name="gia">
+                                <p class="vnd">VNĐ</p>
+                            </div>
+                            <div class="row">
+                                <label style=" width: 37.5%;line-height:25px; font-size: 18px; font-weight: 600;" for="name-product">Giá khuyến mãi:</label>
+                                <input class="price-input"  type="text" name="giakhuyenmai">
+                                <p class="vnd">VNĐ</p>
+                            </div>
+                            <div class="row">
+                                <label style=" width: 39%;line-height:25px; font-size: 18px; font-weight: 600;" for="name-product">Số lượng:</label>
+                                <input class="quantity-input"  type="text" name="soluong">
+                            </div>
+                            <div class="row">
+                                <p style="width: 40%; line-height:25px; font-size: 18px; font-weight: 600;">Phân loại</p>
+                                <div class="classify" style='display:flex; flex-wrap: wrap; width: 60%;'>
+                                    <div class="row"  style='width: 50%;'>
+                                       <input type="checkbox" name="phanloai"  value="Tiramisu" id=""  style='width: 30%;'>
+                                        <label for="tiramisu" style='font-size: 14px; width: 70%;'>Tiramisu</label> 
+                                    </div>
+                                    <div class="row" style='width: 50%;'>
+                                        <input type="checkbox" name="phanloai"  value="Cheesecake" id="" style=' width: 30%;'>
+                                        <label for="cheesecake" style='font-size: 14px;width: 70%;' >Cheesecake</label>
+                                    </div>
+                                    <div class="row" style='width: 50%;'>
+                                        <input type="checkbox" name="phanloai" value="Birthdaycake" id="" style=' width: 30%;'>
+                                        <label for="birdaycake" style='font-size: 14px;width: 70%;' >Bánh sinh nhật</label>
+                                    </div>
+                                    <div class="row" style='width: 50%;'>
+                                        <input type="checkbox" name="phanloai" value="Macaron"  id="" style=' width: 30%;'>
+                                        <label for="macaron" style='font-size: 14px;width: 70%;' >Macaron</label>
+                                    </div>
+                                    
+                                </div>
+                                <div class="btn-add-classify" style="text-align: center;width: 100%;">
+                                    <button class="add-classify">+Thêm phân loại</button>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="add-img">
+                            <div class="upload-price">
+                                <div class="upload-title"><p>Ảnh sản phẩm</p></div>
+                                <input type="file" name="image" src="" alt="" class="add-image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description">
+                            <label style=" line-height:25px; font-size: 18px; font-weight: 600;" for="description">Mô tả sản phẩm:</label>
+                            <textarea name="mota" id="" cols="30" rows="10" style="width:100%;border: 1px solid #B4B4B4;"></textarea>
+                    </div>
+                    <button type="submit" class="btn-add">Thêm sản phẩm</button>
+                </form>
+                <!--Đến đây nè-->
+            </div>
+
+            <!-- sửa sản phẩm -->
+            <!--Doanh thu ở đây nè-->
+            <div class="figure-store">
+                <div class="admin-title">
+                    <p>SỐ LƯỢNG ĐƠN ĐẶT HÀNG</p>
+                </div>
+                <canvas id="quantity-order-chart" style="width:100%;"></canvas>
+                <div class="admin-title" style="margin-top: 30px;">
+                    <p>DOANH THU CỬA HÀNG</p>
+                </div>
+                <canvas id="revenue-store" style="width:100%;"></canvas>
+            </div>
+            <!--Duyệt đơn hàng-->
+            <div class="view-order">
+                <div class="admin-title">
+                    <p>DUYỆT ĐƠN HÀNG</p>
+                </div>
+                <div class="list-order">
+                    <table class="table-order" style="width:100%">
+                        <tr>
+                            <th style="width: 12%;">Mã đơn hàng</th>
+                            <th style="width: 62%;">Chi tiết đơn hàng</th>
+                            <th>Duyệt đơn</th>
+                            <th>Xóa đơn</th>
+                        </tr>
+                        <tr>
+                            <td  style="text-align: center;">123</td>
+                            <td style="padding-left: 12px; padding-top:10px">
+                                <div class="detail-product">
+                                    <div class="title-detail"><p>Chi tiết sản phẩm</p> </div>
+                                    <span>Tên:</span> <span class="name-product"> Banh Tiramisu socola</span></br>
+                                    <span>Giá:</span> <span class="price-product"> 29.000đ</span></br>
+                                    <span>Số lượng:</span> <span class="quantity-product"> 1</span><br>
+                                    <span>Sum-price:</span> <span class="total"> 35.000đ</span>
+                                </div>
+                                <div class="detail-customer" style="margin-top: 20px;">
+                                    <div class="title-detail"><p>Thông tin người mua hàng</p> </div>
+                                    <span>Tên:</span> <span class="name-customer"> Thảo Như</span><br>
+                                    <span>Địa chỉ:</span> <span class="address"> KtxA, khu phố 6, Linh Trung, Thủ Đức</span><br>
+                                    <span>SĐT:</span> <span class="sdt-customer"> 0379089474</span><br>
+                                    <span>Sum-price:</span> <span class="total"> 35.000đ</span>
+                                </div>
+                            </td>
+                            <td style="text-align: center;">
+                                <button class="btn-table">Duyệt</button>
+                            </td>
+                            <td style="text-align: center;">
+                                <button class="btn-table">Xóa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  style="text-align: center;">124</td>
+                            <td style="padding-left: 12px; padding-top:10px">
+                                <div class="detail-product">
+                                    <div class="title-detail"><p>Chi tiết sản phẩm</p> </div>
+                                    <span>Tên:</span> <span class="name-product"> Banh Tiramisu socola</span></br>
+                                    <span>Giá:</span> <span class="price-product"> 29.000đ</span></br>
+                                    <span>Số lượng:</span> <span class="quantity-product"> 1</span><br>
+                                    <span>Sum-price:</span> <span class="total"> 35.000đ</span>
+                                </div>
+                                <div class="detail-customer" style="margin-top: 20px;">
+                                    <div class="title-detail"><p>Thông tin người mua hàng</p> </div>
+                                    <span>Tên:</span> <span class="name-customer"> Thảo Như</span><br>
+                                    <span>Địa chỉ:</span> <span class="address"> KtxA, khu phố 6, Linh Trung, Thủ Đức</span><br>
+                                    <span>SĐT:</span> <span class="sdt-customer"> 0379089474</span><br>
+                                    <span>Sum-price:</span> <span class="total"> 35.000đ</span>
+                                </div>
+                            </td>
+                            <td style="text-align: center;">
+                                <button class="btn-table">Duyệt</button>
+                            </td>
+                            <td style="text-align: center;">
+                                <button class="btn-table">Xóa</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!--Danh sách sản phẩm-->
+            <!---------------------->
+            <div class="list-product">
+                <div class="admin-title">
+                    <p>DANH SÁCH SẢN PHẨM</p>
+                </div>
+                <table class="table-list-product" style="width:100%">
+                    <tr>
+                        <th>Mã SP</th>
+                        <th>Tên SP</th>
+                        <th>Ảnh</th>
+                        <th>Giá</th>
+                        <th>Giá cũ</th>
+                        <th>Số lượng</th>
+                        <th>Phân loại</th>
+                        <th>Xóa</th>
+                        <th>Sửa</th>
+                    </tr>
+                    <% for(var i=0; i<cake.length; i++) {%>
+                        <tr>
+                            <td>
+                                <%= cake[i].IDSP %> 
+                            </td>
+                            <td style="width:22%"> <%= cake[i].TENSANPHAM %> </td>
+                            <td style="width: 6vw;padding:7px 12px;">
+                                <div class="img-cake">
+                                    <a href="/product/<%= cake[i]._id %>"><img src="data:image/png;base64,<%= cake[i].IMAGE %>" alt="" class="img-produce"></a>
+                                </div>
+                            </td>
+                            <td><%= cake[i].GIAKHUYENMAI %></td>
+                            <td><%= cake[i].GIA %></td>
+                            <td style="width:10%"><%= cake[i].SOLUONG %></td>
+                            <td style="width:10%"><%= cake[i].PHANLOAI %></td>
+                            <td style="text-align: center;">
+                                <form action="/admin/danhsachsanpham/<%= cake[i]._id %>?_method=DELETE" method="POST" >
+                                    <button id="xoasp" type="submit" class="btn-table">Xóa</button>
+                                </form>
+                            </td>
+                            <td style="text-align: center;">
+                                <a href="/admin/edit/<%= cake[i].id %>/edit"><button id="editsp" class="btn-table">Sửa</button></a>
+                            </td>
+                        </tr>
+                    <% } %>
+                </table>
+            </div>
+        </div>
+    </div>

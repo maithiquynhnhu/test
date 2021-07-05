@@ -1,0 +1,92 @@
+
+    <!-----------------------sài chung header của login---------------------------->
+    <div class="confirm-order">
+        <div class="table-confirm-order" style="display: flex;">
+            <div class="inf-customer">
+                <div class="title-table">
+                   <p>
+                    Xác nhận thông tin
+                    </p> 
+                </div>
+                
+                <p class="table-body border-button">Tên: Thảo Như</p>
+                <p class="table-body border-button">Số điện thoại: 0379089474</p>
+                <p class="table-body border-button">Địa chỉ:KTX Khu A Khu phố 6 - Phường Linh Trung - TP. Thủ Đức - TP.HCM</p>
+                <p class="table-body">Ghi chú: Giao sớm</p>
+            </div>
+            <div class="inf-order">
+                <div class="title-table">
+                        <p >Thông tin đơn hàng</p>
+                </div>
+                <p class="table-body">Mã đơn hàng:123</p>
+                <p class="table-body">Tổng giá sản phẩm: 60.000đ</p>
+                <p class="table-body">Phí giao hàng: 20.000đ</p>
+                <p class="table-body">Hình thức thanh toán: thanh toán trực tiếp</p>
+                <p class="table-body">Tổng hóa đơn: 80.000đ</p>
+                <div class="btn-confirm-order">
+                        <button>HOÀN THÀNH ĐẶT HÀNG</button>
+
+                </div>
+            </div>
+                <div class="close"><i class="fa fa-close btn-close"></i></div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="form-order">
+            <div class="title-order">
+                <p>Thông tin thanh toán</p>
+            </div>
+            <form action="">
+                <div class="input-area">
+                    <div class="name col two-col">
+                    <p>Họ tên</p>
+                    <input type="text" name='hoten' value='' required>
+                    </div>
+                    <div class="sdt col two-col">
+                    <p>Số điện thoại</p>
+                    <input type="text" name='sdt' value='' required>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="email">
+                <p>Email</p>
+                <input type="email" name='email' value='' required>
+                </div>
+                <div class="input-area">
+                    <p class="address">Địa chỉ</p>
+                    <textarea class="txt-area" name="address" id="input-address" cols="30" rows="5" value='' required></textarea>
+                </div>
+                <div class="input-area">
+                    <p class="address">Ghi chú về đơn hàng</p>
+                    <textarea class="txt-area" name="note" id="input-address" cols="30" rows="5"></textarea>
+                </div>
+                <div class="title-order">
+                <p>Thông tin đơn hàng</p>
+                </div>
+                <div class="inf-order col two-col">
+                    <div class="sum-price-of-order">
+                        <p class="title-inf-order">Tạm tính</p>
+                        <p  class=" s">89.000đ</p>
+                        <input type="text" class="sum-price-order" value="" name="tam-tinh" readonly> 
+                    </div>
+                    <div class="fee-delivery">
+                        <p class="title-inf-order">Phí giao hàng</p>
+                        <p  class="fee-delivery-order">19.000đ</p>
+                        <input type="text" class="fee-delivery-order" value="" name="fee-deliv" readonly>
+                    </div>
+                    
+                    <div class="total-price">
+                        <p class="title-total-price">Tổng cộng</p>
+                        <input type="text" class="total" value="108.000đ" name="tong-tien" readonly>
+                    </div>
+                    <input type="hidden" name="id-web" value="">
+                    <div class="btn-order">
+                        <input type="hidden" name="thamso" value="pay">
+                        <button>Đặt hàng</button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </form>
+        </div>
+    </div>
+

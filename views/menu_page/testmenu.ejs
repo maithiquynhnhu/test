@@ -1,0 +1,521 @@
+
+    <!-------------------------Header------------------------------>
+    <!--**********************************Phần dùng chung**************************************************-->
+    <div id="nav-banner">
+        <sticknav>
+            <!-- (Đoạn code của navigation bar ở đây) -->
+            <div class="nav">
+                <a href="/">
+                    <img src="img/header-footer/sweet-bakery (2).png" alt="" class="img-logo col">
+                </a>
+                <form action="" id="search" class="search-cell col">
+                    <input class="search-input" type="text" placeholder="Bạn muốn tìm gì nè...">
+                    <input class="img-search" type="image" src=img/header-footer/img/magnifying-glass.png" alt="">
+                </form>
+                <div class="nav-menu col">
+                    <ul class="list-menu">
+                        <li><a href="/">HOME</a></li>
+                        <li><a href="/about">ABOUT US</a></li>
+                        <li><a href="/menu">MENU</a></li>
+                        <li><a href="/blog">BLOG</a></li>
+                        <li><a href="/event">EVENT</a></li>
+                        <li><a href="/contact">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-navicon icon-menu icon-open"></i>
+                <i class="fa fa-close icon-menu icon-close"></i>
+                
+                <div class="cart col">
+                    <a href="/cart">
+                        <img src="img/header-footer/trolley (1).png" alt="" class="img-cart"><span id="numgiohang" style=""></span>
+                    </a>
+                    <span class="numsp"></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </sticknav>
+        <div class="content-banner" data-aos="fade-up" data-aos-delay="100"  data-aos-duration="1000">
+            <h1>MENU</h1>
+        </div>
+        <div class="nav-menu-cake" data-aos="fade-right" data-aos-delay="100"  data-aos-duration="1000">
+            <div class="list-menu-cake cheese-cake-btn col">
+                <a href="#neo-menu">
+                    <div class="contant-img-cake">
+                        <img src="img/menu/Rectangle 108.jpg" alt="" class="img-cake">
+                        <div class="overlay">
+                        </div>
+                        <p class="classify-cake">CHEESE CAKE</p>
+                    </div>
+                </a>
+            </div>
+            <div class="list-menu-cake tira-cake-btn col">
+                <a href="#neo-menu">
+                    <div class="contant-img-cake">
+                    <img src="img/menu/Rectangle 109.jpg" alt="" class="img-cake">
+                    <div class="overlay">
+                    </div>
+                    <p class="classify-cake">TIRAMISU</p>
+                    </div>
+                </a>
+            </div>
+            <div class="list-menu-cake macaron-cake-btn col">
+                <a href="#neo-menu">
+                    <div class="contant-img-cake">
+                    <img src="img/menu/Rectangle 110.jpg" alt="" class="img-cake">
+                    <div class="overlay">
+                    </div>
+                    <p class="classify-cake">MACARON</p>
+                    </div>
+                </a>
+            </div>
+            <div class="list-menu-cake birthday-cake-btn col">
+                <a href="#neo-menu">
+                    <div class="contant-img-cake">
+                    <img src="img/menu/Rectangle 111.jpg" alt="" class="img-cake">
+                    <div class="overlay">
+                    </div>
+                    <div class="classify-cake">BIRTHDAY CAKE</div>
+                    </div>
+                </a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <!-------------------------------end dùng chung-------------------->
+    <div id="content" style="overflow: hidden;">
+        <!----------------------------Danh sách menu các món------------------------->
+        <div class="menu" id="neo-menu">
+            <!-----------------Menu cheese-cake-------------------->
+            <div class="menu-cheese-cake">
+                <div class="contain-menu-title" data-aos="fade-up" data-aos-delay="100"  data-aos-duration="1000">
+                    <p class="menu-title">MENU dành cho bạn</p>
+                </div>
+                <div class="list-product" data-aos="fade-left" data-aos-delay="100"  data-aos-duration="1000">
+                    <% for(var i=0; i<(Cheesecake.length - Cheesecake.length%2)/2; i++) {%>
+                        <div class="produce-member col haft-width  full-width">
+                            <div class="sale">
+                                <p><%=parseInt(100 - (Cheesecake[i].GIAKHUYENMAI/Cheesecake[i].GIA)*100) %>%</p>
+                            </div>
+                            <div class="img-containt">
+                                <a href="/product/<%= Cheesecake[i]._id %>"><img src="data:image/png;base64,<%= Cheesecake[i].IMAGE %>" alt="" class="img-produce"></a>
+                            </div>
+                            <p class="name-sp" name="Cheesecake1"><%= Cheesecake[i].TENSANPHAM %> </p>
+                            <div class="price">
+                                <p class="price-old"><%= Cheesecake[i].GIA %>đ</p>
+                                <p class="price-new" name="GIACHEESECAKE1"><%= Cheesecake[i].GIAKHUYENMAI %>đ</p>
+                            </div>
+                            <div class="button-order">
+                                <button class="btn-order"  onclick="addctgiohang('data:image/png;base64,<%= Cheesecake[i].IMAGE %>','Cheesecake1','GIACHEESECAKE1')" >ĐẶT</button>
+                            </div>
+                        </div>
+                    <% } %>
+                    <div class="clear"></div>
+                </div>
+                <div class="list-product" data-aos="fade-right" data-aos-delay="100"  data-aos-duration="1000">
+                    <% for(var i=(Cheesecake.length - Cheesecake.length%2)/2; i<Cheesecake.length; i++) {%>
+                        <div class="produce-member col haft-width  full-width">
+                            <div class="sale">
+                                <p><%=parseInt(100 - (Cheesecake[i].GIAKHUYENMAI/Cheesecake[i].GIA)*100) %>%</p>
+                            </div>
+                            <div class="img-containt">
+                                <a href="/product/<%= Cheesecake[i]._id %>"><img src="data:image/png;base64,<%= Cheesecake[i].IMAGE %>" alt="" class="img-produce"></a>
+                            </div>
+                            <p class="name-sp" name="Cheesecake2"><%= Cheesecake[i].TENSANPHAM %> </p>
+                            <div class="price">
+                                <p class="price-old"><%= Cheesecake[i].GIA %>đ</p>
+                                <p class="price-new" name="GIACHEESECAKE2"><%= Cheesecake[i].GIAKHUYENMAI %>đ</p>
+                            </div>
+                            <div class="button-order">
+                                <button class="btn-order" onclick="addctgiohang('data:image/png;base64,<%= Cheesecake[i].IMAGE %>','Cheesecake2','GIACHEESECAKE2')">ĐẶT</button>
+                            </div>
+                        </div>
+                    <% } %>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <!-----------birthday cake------------->
+            <div class="menu-birthday-cake" >
+                <div class="contain-menu-title" data-aos="fade-up" data-aos-delay="100"  data-aos-duration="1000">
+                    <p class="menu-title">MENU dành cho bạn</p>
+                </div>
+                <div class="list-product" data-aos="fade-left" data-aos-delay="100"  data-aos-duration="1000">
+                    <% for(var i=0; i<(Birthday.length - Birthday.length%2)/2; i++) {%>
+                        <div class="produce-member col haft-width  full-width">
+                            <div class="sale">
+                                <p><%=parseInt(100 - (Birthday[i].GIAKHUYENMAI/Birthday[i].GIA)*100) %>%</p>
+                            </div>
+                            <div class="img-containt">
+                                <a href="/product/<%= Birthday[i]._id %>"><img src="data:image/png;base64,<%= Birthday[i].IMAGE %>" alt="" class="img-produce"></a>
+                            </div>
+                            <p class="name-sp" name="Birthday1"><%= Birthday[i].TENSANPHAM %> </p>
+                            <div class="price">
+                                <p class="price-old"><%= Birthday[i].GIA %>đ</p>
+                                <p class="price-new" name="GIABIR1"><%= Birthday[i].GIAKHUYENMAI %>đ</p>
+                            </div>
+                            <div class="button-order">
+                                <button class="btn-order" onclick="addctgiohang('data:image/png;base64,<%= Birthday[i].IMAGE %>','Birthday1','GIABIR1')">ĐẶT</button>
+                            </div>
+                        </div>
+                    <% } %>
+                    <div class="clear"></div>
+                </div>
+                <div class="list-product" data-aos="fade-right" data-aos-delay="100"  data-aos-duration="1000">
+                    <% for(var i=(Birthday.length - Birthday.length%2)/2; i<Birthday.length; i++) {%>
+                        <div class="produce-member col haft-width  full-width">
+                            <div class="sale">
+                                <p><%=parseInt(100 - (Birthday[i].GIAKHUYENMAI/Birthday[i].GIA)*100) %>%</p>
+                            </div>
+                            <div class="img-containt">
+                                <a href="/product/<%= Birthday[i]._id %>"><img src="data:image/png;base64,<%= Birthday[i].IMAGE %>" alt="" class="img-produce"></a>
+                            </div>
+                            <p class="name-sp" name="Birthday2"><%= Birthday[i].TENSANPHAM %> </p>
+                            <div class="price">
+                                <p class="price-old"><%= Birthday[i].GIA %>đ</p>
+                                <p class="price-new" name="GIABIR2"><%= Birthday[i].GIAKHUYENMAI %>đ</p>
+                            </div>
+                            <div class="button-order">
+                                <button class="btn-order" onclick="addctgiohang('data:image/png;base64,<%= Birthday[i].IMAGE %>','Birthday2','GIABIR2')">ĐẶT</button>
+                            </div>
+                        </div>
+                    <% } %>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <!-----------Macaron cake------------->
+            <div class="menu-macaron-cake">
+                <div class="contain-menu-title" data-aos="fade-upt" data-aos-delay="100"  data-aos-duration="1000">
+                    <p class="menu-title">MENU dành cho bạn</p>
+                </div>
+                <div class="list-product" data-aos="fade-left" data-aos-delay="100"  data-aos-duration="1000">
+                    <% for(var i=0; i<(Macaron.length - Macaron.length%2)/2; i++) {%>
+                        <div class="produce-member col haft-width  full-width">
+                            <div class="sale">
+                                <p><%=parseInt(100 - (Macaron[i].GIAKHUYENMAI/Macaron[i].GIA)*100) %>%</p>
+                            </div>
+                            <div class="img-containt">
+                                <a href="/product/<%= Macaron[i]._id %>"><img src="data:image/png;base64,<%= Macaron[i].IMAGE %>" alt="" class="img-produce"></a>
+                            </div>
+                            <p class="name-sp" name="Macaron1"><%= Macaron[i].TENSANPHAM %> </p>
+                            <div class="price">
+                                <p class="price-old"><%= Macaron[i].GIA %>đ</p>
+                                <p class="price-new" GIA="GIAMACARON1"><%= Macaron[i].GIAKHUYENMAI %>đ</p>
+                            </div>
+                            <div class="button-order">
+                                <button class="btn-order" onclick="addctgiohang('data:image/png;base64,<%= Macaron[i].IMAGE %>','Macaron1','GIAMACARON1')">ĐẶT</button>
+                            </div>
+                        </div>
+                    <% } %>
+                    <div class="clear"></div>
+                </div>
+                <div class="list-product" data-aos="fade-right" data-aos-delay="100"  data-aos-duration="1000">
+                    <% for(var i=(Macaron.length - Macaron.length%2)/2; i<Macaron.length; i++) {%>
+                        <div class="produce-member col haft-width  full-width">
+                            <div class="sale">
+                                <p><%=parseInt(100 - (Macaron[i].GIAKHUYENMAI/Macaron[i].GIA)*100) %>%</p>
+                            </div>
+                            <div class="img-containt">
+                                <a href="/product/<%= Macaron[i]._id %>"><img src="data:image/png;base64,<%= Macaron[i].IMAGE %>" alt="" class="img-produce"></a>
+                            </div>
+                            <p class="name-sp" name="Macaron2"><%= Macaron[i].TENSANPHAM %> </p>
+                            <div class="price">
+                                <p class="price-old"><%= Macaron[i].GIA %>đ</p>
+                                <p class="price-new" name="GIAMACARON2"><%= Macaron[i].GIAKHUYENMAI %>đ</p>
+                            </div>
+                            <div class="button-order">
+                                <button class="btn-order" onclick="addctgiohang('data:image/png;base64,<%= Macaron[i].IMAGE %>','Macaron2','GIAMACARON2')">ĐẶT</button>
+                            </div>
+                        </div>
+                    <% } %>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <!----------------------------Tiramisu cake-------------------->
+            <!----------------------------Tiramisu cake-------------------->
+            <div class="menu-tiramisu-cake">
+                <div class="contain-menu-title" data-aos="fade-up" data-aos-delay="100"  data-aos-duration="1000">
+                    <p class="menu-title">MENU dành cho bạn</p>
+                </div>
+                <div class="list-product" data-aos="fade-left" data-aos-delay="100"  data-aos-duration="1000">
+                    <% for(var i=0; i<(Tiramisu.length - Tiramisu.length%2)/2; i++) {%>
+                        <div class="produce-member col haft-width  full-width">
+                            <div class="sale">
+                                <p><%=parseInt(100 - (Tiramisu[i].GIAKHUYENMAI/Tiramisu[i].GIA)*100) %>%</p>
+                            </div>
+                            <div class="img-containt">
+                                <a href="/product/<%= Tiramisu[i]._id %>"><img src="data:image/png;base64,<%= Tiramisu[i].IMAGE %>" alt="" class="img-produce"></a>
+                            </div>
+                            <p class="name-sp" name="Tiramisu1"><%= Tiramisu[i].TENSANPHAM %> </p>
+                            <div class="price">
+                                <p class="price-old"><%= Tiramisu[i].GIA %>đ</p>
+                                <p class="price-new" name="GIATIRA1"><%= Tiramisu[i].GIAKHUYENMAI %>đ</p>
+                            </div>
+                            <div class="button-order">
+                                <button class="btn-order" onclick="addctgiohang('data:image/png;base64,<%= Tiramisu[i].IMAGE %>','Tiramisu1','GIATIRA1')">ĐẶT</button>
+                            </div>
+                        </div>
+                    <% } %>
+                    <div class="clear"></div>
+                </div>
+                <div class="list-product" data-aos="fade-right" data-aos-delay="100"  data-aos-duration="1000">
+                    <% for(var i=(Tiramisu.length - Tiramisu.length%2)/2; i<Tiramisu.length; i++) {%>
+                        <div class="produce-member col haft-width  full-width">
+                            <div class="sale">
+                                <p><%=parseInt(100 - (Tiramisu[i].GIAKHUYENMAI/Tiramisu[i].GIA)*100) %>%</p>
+                            </div>
+                            <div class="img-containt">
+                                <a href="/product/<%= Tiramisu[i]._id %>"><img src="data:image/png;base64,<%= Tiramisu[i].IMAGE %>" alt="" class="img-produce"></a>
+                            </div>
+                            <p class="name-sp"name="Tiramisu2"><%= Tiramisu[i].TENSANPHAM %> </p>
+                            <div class="price">
+                                <p class="price-old"><%= Tiramisu[i].GIA %>đ</p>
+                                <p class="price-new" name="GIATIRA2"><%= Tiramisu[i].GIAKHUYENMAI %>đ</p>
+                            </div>
+                            <div class="button-order">
+                                <button class="btn-order" onclick="addctgiohang('data:image/png;base64,<%= Tiramisu[i].IMAGE %>','Tiramisu2','GIATIRA2')">ĐẶT</button>
+                            </div>
+                        </div>
+                    <% } %>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------slideshow sản phẩm mới--------------------------->
+        <div class="new-cake">
+            <div class="contain-menu-title" data-aos="fade-up" data-aos-delay="100"  data-aos-duration="1000">
+                <p class="menu-title">Sản phẩm mới</p>
+            </div>
+            <div class="contain-slideshow-cake">
+                <div class="slideshow-cake fade">
+                    <div class="list-product">
+                        <div class="produce-member col haft-width full-width">
+                            <div class="sale">
+                                <p>50%</p>
+                            </div>
+                            <div class="img-containt">
+                                <img src="img/menu/blueberry-1.jpg" alt="" class="img-produce">
+                            </div>
+                            <p class="name-sp" name="sp1">Cheesecake Blueberry</p>
+                            <div class="price">
+                                <p class="price-old">40.000đ</p>
+                                <p class="price-new" name="gia1">20.000đ</p>
+                            </div>
+                            <div class="button-order">
+                                <button class="btn-order" onclick="addctgiohang('img/menu/blueberry-1.jpg','sp1','gia1')">ĐẶT</button>
+                            </div>
+                        </div>
+                        <div class="produce-member col haft-width full-width">
+                            <div class="sale">
+                                <p>50%</p>
+                            </div>
+                            <div class="img-containt">
+                                <img src="img/menu/Sweat-bakery-cheesecake-cherry 18.jpg" alt="" class="img-produce">
+                            </div>
+                            <p class="name-sp">Bánh kem Dâu tây </p>
+                            <div class="price" name="sp2">
+                                <p class="price-old">400.000đ</p>
+                                <p class="price-new" gia="gia2">200.000đ</p>
+                            </div>
+                            <div class="button-order">
+                                <button class="btn-order" onclick="addctgiohang('img/menu/Sweat-bakery-cheesecake-cherry 18.jpg','sp2','gia2')">ĐẶT</button>
+                            </div>
+                        </div>
+                        <div class="produce-member col haft-width full-width">
+                            <div class="sale">
+                                <p>50%</p>
+                            </div>
+                            <div class="img-containt">
+                                <img src="img/menu/Sweat-bakery-cheesecake-cherry 16.jpg" alt="" class="img-produce">
+                            </div>
+                            <p class="name-sp" name="sp3">Macaron Trà xanh</p>
+                            <div class="price">
+                                <p class="price-old">40.000đ</p>
+                                <p class="price-new" gia="gia3">20.000đ</p>
+                            </div>
+                            <div class="button-order">
+                                <button class="btn-order" onclick="addctgiohang('img/menu/Sweat-bakery-cheesecake-cherry 16.jpg','sp3','gia3')">ĐẶT</button>
+                            </div>
+                        </div>
+                        <div class="produce-member col haft-width full-width">
+                            <div class="sale">
+                                <p>50%</p>
+                            </div>
+                            <div class="img-containt">
+                                <img src="img/menu/socola-5.jpg" alt="" class="img-produce">
+                            </div>
+                            <p class="name-sp">Tiramisu Socola</p>
+                            <div class="price" name="sp4">
+                                <p class="price-old">40.000đ</p>
+                                <p class="price-new" name="gia4">20.000đ</p>
+                            </div>
+                            <div class="button-order">
+                                <button class="btn-order" onclick="addctgiohang('img/menu/socola-5.jpg','sp4','gia4')">ĐẶT</button>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                <div class="clear"></div>
+                </div>
+                <div class="slideshow-cake fade">
+                    <div class="list-product">
+                        <div class="produce-member col haft-width full-width">
+                            <div class="sale">
+                                <p>50%</p>
+                            </div>
+                            <div class="img-containt">
+                                <img src="img/menu/cheese-xoai.jpg" alt="" class="img-produce">
+                            </div>
+                            <p class="name-sp" name="sp5">Cheesecake Xoài</p>
+                            <div class="price">
+                                <p class="price-old">40.000đ</p>
+                                <p class="price-new" name="gia5">20.000đ</p>
+                            </div>
+                            <div class="button-order">
+                                <button class="btn-order" onclick="addctgiohang('img/menu/cheese-xoai.jpg','sp5','gia5')">ĐẶT</button>
+                            </div>
+                        </div>
+                        <div class="produce-member col haft-width full-width">
+                            <div class="sale">
+                                <p>50%</p>
+                            </div>
+                            <div class="img-containt">
+                                <img src="img/menu/chuoi.jpg" alt="" class="img-produce">
+                            </div>
+                            <p class="name-sp" name="sp6">Cheesecake Chuối</p>
+                            <div class="price">
+                                <p class="price-old">40.000đ</p>
+                                <p class="price-new" name="gia6">20.000đ</p>
+                            </div>
+                            <div class="button-order">
+                                <button class="btn-order" onclick="addctgiohang('img/menu/chuoi.jpg','sp6','gi6')">ĐẶT</button>
+                            </div>
+                        </div>
+                        <div class="produce-member col haft-width full-width">
+                            <div class="sale">
+                                <p>50%</p>
+                            </div>
+                            <div class="img-containt">
+                                <img src="img/menu/bo-4.jpg" alt="" class="img-produce">
+                            </div>
+                            <p class="name-sp" name="sp7">Cheesecake Bơ</p>
+                            <div class="price">
+                                <p class="price-old">40.000đ</p>
+                                <p class="price-new" name="gia7">20.000đ</p>
+                            </div>
+                            <div class="button-order">
+                                <button class="btn-order" onclick="addctgiohang('img/menu/bo-4.jpg','sp7','gia7')">ĐẶT</button>
+                            </div>
+                        </div>
+                        <div class="produce-member col haft-width full-width">
+                            <div class="sale">
+                                <p>50%</p>
+                            </div>
+                            <div class="img-containt">
+                                <img src="img/menu/cafe-3.jpg" alt="" class="img-produce">
+                            </div>
+                            <p class="name-sp" name="sp8">Cheesecake Coffee</p>
+                            <div class="price">
+                                <p class="price-old">40.000đ</p>
+                                <p class="price-new" name="gia8">20.000đ</p>
+                            </div>
+                            <div class="button-order">
+                                <button class="btn-order" onclick="addctgiohang('img/menu/cafe-3.jpg','sp8','gia8')">ĐẶT</button>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                <div class="clear"></div>
+                </div>
+                <div class="slideshow-cake fade">
+                    <div class="list-product">
+                        <div class="produce-member col haft-width full-width">
+                            <div class="sale">
+                                <p>50%</p>
+                            </div>
+                            <div class="img-containt">
+                                <img src="img/menu/blueberry-1.jpg" alt="" class="img-produce">
+                            </div>
+                            <p class="name-sp" name="sp9">Cheesecake Blueberry</p>
+                            <div class="price">
+                                <p class="price-old">40.000đ</p>
+                                <p class="price-new" name="gia9">20.000đ</p>
+                            </div>
+                            <div class="button-order">
+                                <button class="btn-order" onclick="addctgiohang('img/menu/blueberry-1.jpg','sp9','gia9')">ĐẶT</button>
+                            </div>
+                        </div>
+                        <div class="produce-member col haft-width full-width">
+                            <div class="sale">
+                                <p>50%</p>
+                            </div>
+                            <div class="img-containt">
+                                <img src="img/menu/Sweat-bakery-cheesecake-cherry 18.jpg" alt="" class="img-produce">
+                            </div>
+                            <p class="name-sp" name="sp10">Bánh kem Dâu tây </p>
+                            <div class="price">
+                                <p class="price-old">400.000đ</p>
+                                <p class="price-new" gia="gia10">200.000đ</p>
+                            </div>
+                            <div class="button-order">
+                                <button class="btn-order" onclick="addctgiohang('img/menu/Sweat-bakery-cheesecake-cherry 18.jpg','sp10','gia10')">ĐẶT</button>
+                            </div>
+                        </div>
+                        <div class="produce-member col haft-width full-width">
+                            <div class="sale">
+                                <p>50%</p>
+                            </div>
+                            <div class="img-containt">
+                                <img src="img/menu/Sweat-bakery-cheesecake-cherry 16.jpg" alt="" class="img-produce">
+                            </div>
+                            <p class="name-sp" name="sp11">Macaron Trà xanh</p>
+                            <div class="price">
+                                <p class="price-old">40.000đ</p>
+                                <p class="price-new" nảm="gia11">20.000đ</p>
+                            </div>
+                            <div class="button-order">
+                                <button class="btn-order" onclick="addctgiohang('img/menu/Sweat-bakery-cheesecake-cherry 16.jpg','sp11','gia11')">ĐẶT</button>
+                            </div>
+                        </div>
+                        <div class="produce-member col haft-width full-width">
+                            <div class="sale">
+                                <p>50%</p>
+                            </div>
+                            <div class="img-containt">
+                                <img src="img/menu/socola-5.jpg" alt="" class="img-produce">
+                            </div>
+                            <p class="name-sp" name="sp12">Tiramisu Socola</p>
+                            <div class="price">
+                                <p class="price-old">40.000đ</p>
+                                <p class="price-new" name="gia12">20.000đ</p>
+                            </div>
+                            <div class="button-order">
+                                <button class="btn-order" onclick="addctgiohang('img/menu/socola-5.jpg','sp12','gia12')">ĐẶT</button>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                <div class="clear"></div>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top: 20px;" class="btn-slide">
+                <span class="dot" onclick="currentSlide(0)"></span> 
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="/js/product/product.js"></script>
+<script>
+    $(document).ready(function() {
+        AOS.init();
+    });
+</script>
+
+<script>
+var car= localStorage.getItem('soluong');
+if(car!=null){document.getElementById('numgiohang').innerHTML=car;}else{
+    document.getElementById('numgiohang').innerHTML=0;
+}
+</script>
+    <!--footer--><!------------------------------------------------------->

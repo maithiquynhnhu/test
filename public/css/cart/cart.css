@@ -1,0 +1,366 @@
+html{
+    font-family: WorkSans;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.col{
+    float: left
+}
+.two-col{
+    width: 50%;
+}
+.three-col{
+    width: 33.33333%;
+    display: inline-block;
+}
+.clear{
+    clear: both;
+}
+.title-banner{
+    text-align: center;
+}
+.banner{
+    height: 80vh;
+    background: url('../../img/cart/backgr.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.title-banner{
+    padding: 30vh;
+    font-size: 70px;
+    font-family: WorkSansB;
+    letter-spacing: 2px;
+    color: #fff;
+}
+.breadcrumb {
+    margin: 20px 7%;
+}
+.breadcrumb a{
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 15px;
+    text-decoration: none;
+    color: rgb(97, 97, 97);
+}
+.breadcrumb .brc-current{
+    color: #000;
+}
+span{
+    font-size: 12px;
+}
+#content{
+    margin: 0 4%;
+}
+.check-box{
+    
+}
+input[type="checkbox"] {
+    display:none;
+}
+
+input[type="checkbox"] + label {
+    color:#f2f2f2;
+}
+
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:24px;
+    height:24px;
+    margin:0px 10px 4px 0;
+    vertical-align:middle;
+    cursor:pointer;
+    border: rgba(70, 18, 2, 0.445) 2px solid;
+    border-radius: 4px;
+}
+
+input[type="checkbox"]:checked + label span {
+    background-size: 18px 18px;
+    background: url(../../img/cart/check.png);
+    background-position: center;
+}
+.title-choose-all{
+    font-size: 24px;
+    font-family: WorkSansB;
+    color: #C7772E;
+    display: inline;
+    line-height: 10px;
+    margin-bottom: 5%;
+    margin-left: 20px;
+}
+.title{
+    margin-bottom: 5%;
+}
+.check-choose-product{
+    width: 5%;
+}
+.img-product img{
+    width: 100%;
+    height: 100%;
+    border: #000 2px solid;
+    object-fit: cover;
+    object-position: center;
+}
+.img-product{
+    margin: 5%;
+    width: 30%;
+    height: 25vw;
+}
+.inf-detail-product{
+    width: 60%;
+}
+.product-member{
+    margin-bottom: 40px;
+}
+.product-inf{
+    width: 90%;
+    background: rgba(174, 84, 0, 0.1);
+}
+.check-choose-product{
+    margin-top: 18%;
+}
+
+.name-cake{
+    font-family: WorkSansB;
+    font-size: 46px;
+    line-height: 42px;
+    color: #C7772E;
+    width: 70%;
+}
+.inf-detail-product{
+    margin-top: 6%;
+    padding-left: 2%;
+}
+.price-new{
+    width: 30%;
+    font-size: 36px;
+    font-family: WorkSansB;
+    color: #FF0000;
+}
+.price-old{
+    color: rgb(143, 143, 143);
+    text-decoration: line-through;
+    font-size: 28px;
+    text-align: right;
+    padding-right: 14%;
+}
+.type-of-cake span{
+    font-size: 20px;
+}
+.number-of-cake p{
+    display: inline;
+    font-size: 20px;
+    margin-right: 20px;
+}
+.number-of-cake{
+    padding-top: 4%;
+}
+.number-of-cake button{
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 0px;
+    background-color: #C4C4C4;
+    font-size: 16px;
+}
+.number{
+    width: 35px;
+    border: none;
+    background-color: #D9D3CD;
+    padding: 5px;
+    text-align: center;
+    margin: 0 -5px;
+    border-radius: 0px;
+    line-height: 14px;
+}
+.sum-price{
+    margin-top: 7%;
+}
+.title-sum{
+    font-family: WorkSansB;
+    font-size: 30px;
+    color: #000000;
+
+}
+.sum-price-cake{
+    font-size: 36px;
+    text-align: center;
+    color: #FF0000;
+    font-family: WorkSansB;
+    text-align: right;
+    margin-right: 13%;
+}
+.delete{
+    background: rgba(148, 53, 0, 0.2);
+    border-radius: 30px;
+    border: none;
+    width: 117px;
+    height: 40px;
+    font-size: 24px;
+    color: #FFFFFF;
+    font-family: WorkSansB;
+    padding-top: 3px;
+    float: right;
+    margin-right: 13%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.price{
+    text-align: right;
+}
+.price-total{
+    margin: 5%;
+    margin-bottom: 3%;
+    padding: 10px;
+    background-color: #E1CCB8;
+}
+.name-total{
+    font-size: 26px;
+    color: #8F612B;
+    font-family: WorkSansB;
+}
+.price {
+    font-size: 26px;
+    font-family: WorkSansB;
+    color: #F73333;
+}
+.btn-payment{
+    text-align: right;
+    margin-right: 5%;
+}
+.btn-payment button{
+    background: #FFFFFF;
+    border: 2px solid #A75203;
+    border-radius: 10px;
+    width: 176px;
+    height: 42px;
+    font-size: 18px;
+    padding-top: 4px;
+    color: #E71E1E;
+    font-family: WorkSansB;
+}
+#footer {
+    top: 40px;
+}
+/*responsive*/
+@media (min-width: 767px) and (max-width: 1023px){
+    .inf-detail-product {
+        margin-top: 4%;
+    }
+    .price-new {
+        margin-top: 13px;
+        font-size: 19px;
+    }
+    .price-old{
+        font-size: 15px;
+    }
+    .sum-price-cake {
+        font-size: 26px;
+    }
+    .title-sum {
+        font-size: 24px;
+    }
+    .name-total {
+        font-size: 20px;
+    }
+    .name-cake {
+        font-size: 22px;
+    }
+    .type-of-cake span {
+        font-size: 16px;
+    }
+    .number-of-cake p {
+        font-size: 14px;
+    }
+    .number-of-cake {
+        padding-top: 1%;
+    }
+    .sum-price {
+        margin-top: 4%;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px){
+
+}
+
+@media (max-width: 575px){
+    .title-banner {
+        padding: 62% 0;
+        font-size: 47px;
+    }
+    .inf-detail-product {
+        margin-top: 1%;
+    }
+    .name-cake {
+        font-size: 13px;
+        line-height: 20px;
+        margin-top: 5%;
+
+    }
+    .price-new {
+        margin-top: 7%;
+        font-size: 10px;
+    }
+    .price-old {
+        font-size: 8px;
+        padding-right: 7%;
+    }
+    .type-of-cake span,
+    .number-of-cake p {
+        font-size: 10px;
+    }
+    .number-of-cake button {
+        width: 17px;
+        height: 17px;
+    }
+    .number {
+        width: 25px;
+        padding: 1px;
+        padding-top: 6px;
+        font-size: 9px;
+        line-height: 0px;
+        /* line-height: 11px; */
+    }
+    .title-sum {
+        font-family: WorkSansB;
+        font-size: 11px;
+    }
+    .sum-price-cake {
+        font-size: 11px;
+    }
+    .delete {
+        width: 51px;
+        height: 21px;
+        font-size: 9px;
+    }
+    .breadcrumb a {
+        font-size: 10px;
+    }
+    .breadcrumb {
+        margin:10px 5%;
+    }
+    input[type="checkbox"] + label span {
+        width: 14px;
+        height: 14px;
+    }
+    .title-choose-all {
+        font-size: 16px;
+        margin-left: -10px;
+    }
+    .name-total {
+        font-size: 11px;
+    }
+    .price {
+        font-size: 12px;
+    }
+    .btn-payment button {
+        width: 100px;
+        height: 29px;
+        font-size: 10px;
+    }
+}

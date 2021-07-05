@@ -1,0 +1,173 @@
+
+    <div id="nav-banner">
+        <sticknav>
+            <!-- (Đoạn code của navigation bar ở đây) -->
+            <div class="nav">
+                <a href="#">
+                    <img src="img/header-footer/sweet-bakery (2).png" alt="" class="img-logo col">
+                </a>
+                <form action="" id="search" class="search-cell col">
+                    <input class="search-input" type="text" placeholder="Bạn muốn tìm gì nè...">
+                    <input class="img-search" type="image" src="img/header-footer/magnifying-glass.png" alt="">
+                </form>
+                <div class="nav-menu col">
+                    <ul class="list-menu">
+                        <li><a href="/">HOME</a></li>
+                        <li><a href="/about">ABOUT US</a></li>
+                        <li><a href="/menu">MENU</a></li>
+                        <li><a href="/blog">BLOG</a></li>
+                        <li><a href="/event">EVENT</a></li>
+                        <li><a href="/contact">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-navicon icon-menu icon-open"></i>
+                <i class="fa fa-close icon-menu icon-close"></i>
+                
+                <div class="cart col">
+                    <img src="img/header-footer/trolley (1).png" alt="" class="img-cart"><span id="numgiohang" style=""></span>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </sticknav>
+        <div class="banner">
+            <h1 class="title-banner">CART</h1>
+        </div>
+        <div class="breadcrumb">
+            <a href="">Trang chủ</a><span>></span><a class="brc-current" href="">Giỏ hàng</a>
+        </div>
+        <div id="content">
+            <div class="title">
+                <input type="checkbox" id="choose-all" name="cc" class="choose-all"/>
+                <label for="choose-all"><span></span></label>
+                <p class="title-choose-all">CHỌN TẤT CẢ</p>
+            </div>
+
+
+<!-- Thêm sản phẩm -->
+<script>
+    // Lấy dữ liệu từ LocalStorage
+    let storage=localStorage.getItem('cart')
+    if(storage){
+        var cart=JSON.parse(storage)
+    }
+// Xét mảng sản phẩm - Gom nhóm các sản phẩm dùng chung
+for(let sodau=1;sodau<cart.length; sodau++)
+{
+    for(let sosau=sodau+1;sosau<cart.length;sosau++) {
+        if(cart[sodau]){let q = cart[sodau].TENSP;
+        if(cart[sosau]){
+        let F = cart[sosau].TENSP;
+        if(q==F){
+            cart.splice(sosau, 1); 
+            cart[sodau].SOLUONG++;
+            cart.length--;
+        }}}
+    } 
+}
+// Show dữ liệu cart
+console.log(cart)
+
+// Phân loại sản phẩm
+for(let soba=1;soba<cart.length;soba++){
+    var des = cart[soba].TENSP;
+var Tiramisu = des.lastIndexOf('Tiramisu');
+console.log("vị trí"+Tiramisu)
+var Cheesecake = des.lastIndexOf('Cheesecake');
+var Birthday = des.lastIndexOf('Birth');
+var Macaron=des.lastIndexOf('Maracon')
+if(Tiramisu==0){cart[soba].PHANLOAI='Tiramisu';}else{
+if(Cheesecake==0){cart[soba].PHANLOAI='Cheesecake';}else{
+if(Birthday==0){cart[soba].PHANLOAI='Birthday'; cart[soba].GIAGOC=250000}else{
+if(Macaron==0){cart[soba].PHANLOAI='Macaron';}}}}
+}
+console.log(cart)
+
+// Thêm sản phẩm với template có sẵn
+for(let sohai=1;sohai<cart.length; sohai++)
+{
+
+    document.writeln(`<tr id="item${sohai}">
+        <div class="product-member" id="product-${sohai}">
+                        <div class="check-choose-product col">
+                            <input type="checkbox" id="choose-product-mem${sohai}" name="sp1" class="choose-product"/>
+                            <label for="choose-product-mem${sohai}"><span></span></label>
+                        </div>
+                        <div class="product-inf col">
+                            <div class="img-product col">
+                                <img src="${cart[sohai].IMG}" alt="">
+                            </div>
+                            <div class="inf-detail-product col">
+                                <div class="name-and-price">
+                                    <p class="name-cake col">${cart[sohai].TENSP}</p>
+                                    <p id="price-2" class="price-new col">${cart[sohai].GIA}đ</p>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="price-old">${20000}đ</div>
+                                <div class="type-of-cake"><span>Loại: </span><span class="type">${cart[sohai].PHANLOAI}</span></div>
+                                <div class="number-of-cake">
+                                    <p>Số lượng: </p>
+                                    <button class="add">+</button>
+                                    <input class="number" type="text" value="${cart[sohai].SOLUONG}" readonly>
+                                    <button class="sub">-</button>
+                                </div>
+                                <div class="sum-price">
+                                    <p class="title-sum col">Tổng:</p>
+                                    <p class="sum-price-cake">${cart[sohai].GIA}đ</p>
+                                </div>
+                                <button class="delete" onclick="deleteitemcart('item${sohai}')">Xóa</button>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+			</tr>`)
+}
+
+</script>
+
+<!-- Xét lại số lượng sản phẩm -->
+<script>
+  
+  var car= localStorage.getItem('soluong');
+if(car!=null){document.getElementById('numgiohang').innerHTML=car;}else{
+    document.getElementById('numgiohang').innerHTML=0;
+}
+</script>
+
+<!-- Thanh toán -->
+<div class="price-total">
+    <p class="name-total col two-col">Giá trị đơn hàng của bạn:</p>
+    <p class="price col two-col">0đ</p>
+    <div class="clear"></div>
+</div>
+<div class="btn-payment">
+    <button id="payment-btn" onclick="">THANH TOÁN</button>
+</div>
+</div>
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js'></script>
+
+
+
+<script>
+    function deleteitemcart(x){
+        var nameitem= x.slice(4,);
+        console.log(nameitem)
+
+    var close=cart[nameitem].TENSP;
+    console.log(close)
+    var numsp=cart[nameitem].SOLUONG;
+        var numreset= Number(localStorage.getItem('soluong'))-Number(numsp);
+        localStorage.setItem('soluong',numreset)
+    for(let l=1;l<cart.length;l++)
+   {if(cart[l].TENSP==close)
+        cart.splice(l, 1); 
+
+    }
+    localStorage.setItem('cart',JSON.stringify(cart))
+    console.log(localStorage)
+    console.log(cart.length)
+    window.location.reload();
+
+    }
+</script>

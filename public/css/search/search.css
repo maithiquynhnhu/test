@@ -1,0 +1,244 @@
+
+html{
+    scroll-behavior: smooth;
+}
+p{
+    margin-block: 0;
+    margin: 0;
+}
+.col{
+    float: left
+}
+.two-col{
+    width: 50%;
+}
+.three-col{
+    width: 30%;
+}
+
+.clear{
+    clear: both;
+}
+#content{
+    width: 100%;
+}
+.icon-menu{
+    display: none;
+}
+#nav-banner{
+    background-image: url(../../../public/img/product/banner.png);
+    height: 140vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.content-banner h1{
+    color: #fff;
+    text-align: center;
+    margin: auto;
+    padding-top: 20%;
+    font-size: 68px;
+    font-family: WorkSansB;
+    letter-spacing: 4px;
+}
+.list-menu-cake{
+    width: 25%;
+    padding: 0 3%;
+    position: relative;
+}
+.img-cake{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: -7px;
+}
+.nav-menu-cake{
+    padding: 40px;
+    margin-top: 12%;
+}
+.classify-cake{
+    right: 0;
+    left: 0;
+    position: absolute;
+    bottom: 18px;
+    text-align: center;
+    color: #fff;
+    font-family: WorkSansB;
+    font-size: 20px;
+    letter-spacing: 1px;
+
+}
+/*Hiệu ứng rê chuột*/
+.img-containt:hover img {
+    transform: scale(1.2);
+    -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25);
+    -o-transform:scale(1.25);
+    transition: 2s;
+}
+
+.menu-title{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: #97511E;
+    font-family: WorkSansB;
+}
+#content{
+    margin-top: 60px;
+}
+.contain-menu-title{
+    background: #F0BC8B;
+    padding: 20px 5%;
+    padding-bottom: 10px;
+}
+/*menu*/
+.menu{
+    
+}
+.list-product{
+    margin:80px 4%;
+}
+.produce-member{
+    width: 19%;
+    margin:0 3%;
+    background: #F5EDE7;
+    position: relative;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+}
+.img-containt{
+    height: 13vw;
+    position: relative;
+    overflow: hidden;
+}
+.produce-member img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+}
+.sale {
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    padding-top: 18px;
+    border-radius: 50%;
+    color: #ffeb2c;
+    position: absolute;
+    right: -25px;
+    top: -25px;
+    z-index: 99;
+    background: #FF5858;
+    cursor: pointer;
+}
+.sale:hover{
+    font-size: 26px;
+    text-shadow: 0 0 6px #ffffff;
+    transition: 1s;
+    padding-top:12px;
+    cursor: pointer;
+
+}
+.name-sp{
+    font-family: WorkSansB;
+    font-size: 21px;
+    line-height: 25px;
+    text-align: center;
+    color: rgba(145, 43, 0, 0.97);
+    padding: 8px 60px;
+    border-bottom: 2px solid #f9d3a786;
+    height: 64px;
+}
+.price{
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 20px;
+}
+.price p{
+    display: inline;
+}
+.price-new {
+    float: right;
+    color: #FF3D00;
+    font-size: 20px;
+    font-weight: 600;
+}
+.price-old{
+    text-decoration-line: line-through;
+    font-size: 18px;
+    color: #9E9E9E;
+}
+.button-order {
+    width: 40%;
+    margin: 10px auto;
+}
+.btn-order{
+    width: 100%;
+    height: 30px;
+    background-color: #ED1E1E;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: WorkSansB;
+    letter-spacing: 2px;
+}
+.btn-order:hover{
+    background-color: #4b0000;
+}
+/*slideshow bánh*/
+.dot:hover
+ {
+    background-color: #717171;
+}
+
+  /* Ẩn các slider */
+.slideshow-cake {
+    display: none;
+} 
+/*hiệu ứng*/
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3s;
+    animation-name: fade;
+    animation-duration: 3s;
+}
+   
+  @-webkit-keyframes fade {
+    from{transform: translateX(100%); opacity: 0;}
+    to{transform: translateX(0);opacity: 1;}
+  }
+   
+  @keyframes fade {
+    from{transform: translateX(100%);opacity: 0;}
+    to{transform: translateX(0);opacity: 1;}
+  }
+  /*điều hướng menu*/
+
+#footer {
+    position: unset;
+    margin-top: 40px;
+}
+
+
+#over {
+    display: none;
+    background: rgba(0, 0, 0, 0.404);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 100;
+}
+.img-containt:hover img {
+    transform: scale(1.2);
+    -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25);
+    -o-transform:scale(1.25);
+    transition: 2s;
+}

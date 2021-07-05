@@ -1,0 +1,502 @@
+
+@font-face{
+    src:url(../../css/font/Coiny-Regular.ttf);
+    font-family: Coiny;
+}
+@font-face{
+    src:url(../../css/font/Damion-Regular.ttf);
+    font-family: Damion;
+}
+@font-face{
+    src:url(../../css/font/Yrsa-Bold.ttf);
+    font-family: YrsaB;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.col{
+    float: left
+}
+.two-col{
+    width: 50%;
+}
+.three-col{
+    width: 33.33333%;
+    display: inline-block;
+}
+.clear{
+    clear: both;
+}
+#nav-banner{
+    position: relative;
+}
+.banner{
+    position: absolute;
+    top:0;
+    width: 100%;
+    z-index: 1;
+}
+
+/*slideshow banner*/
+.slideshow-container {
+    position: relative;
+    top:0;
+}
+  /* Ẩn các slider */
+.mySlides {
+    display: none;
+} 
+  /* định dạng các chấm chuyển đổi các slide */
+.dot,
+.dot-rv {
+    cursor:pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: rgba(221, 155, 117, 0.534);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+  /* khi được hover, active đổi màu nền */
+.active, .dot:hover,
+.dot-rv:hover
+ {
+    background-color: #717171;
+}
+.btn-slide{
+    position: absolute;
+    bottom: 32px;
+    left: 50%
+}
+  /* Thêm hiệu ứng khi chuyển đổi các slide */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 5s;
+    animation-name: fade;
+    animation-duration: 5s;
+}
+   
+  @-webkit-keyframes fade {
+    from {opacity: .6} 
+    to {opacity: 1}
+  }
+   
+  @keyframes fade {
+    from {opacity: .6} 
+    to {opacity: 1}
+  }
+  .fade-rv {
+    -webkit-animation-name: fade-rv;
+    -webkit-animation-duration: 3s;
+    animation-name: fade-rv;
+    animation-duration: 3s;
+}
+   
+  @-webkit-keyframes fade-rv {
+    from{transform: translateX(-100%); opacity: 0;}
+    to{transform: translateX(0);opacity: 1;}
+  }
+   
+  @keyframes fade-rv {
+    from{transform: translateX(100%);opacity: 0;}
+    to{transform: translateX(0);opacity: 1;}
+  }
+/*banner*/
+.banner,
+.review-slide{
+    display: block;
+}
+.mySlides,
+.review-member
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.img-bakery{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+/*Chỉnh content từng ảnh*/
+.text {
+    position: absolute;
+    
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.542);
+}
+.sweet-header{
+    font-family: Coiny;
+    position: absolute;
+    top: 30%;
+    left: 14%;
+    color: #fff;
+    font-size: 135px;
+}
+.bakery-header{
+    font-family: Damion;
+    position: absolute;
+    bottom: 34%;
+    left: 14%;
+    font-size: 58px;
+    color: #fff;
+}
+.slogan{
+    font-weight: 600;
+    position: absolute;
+    bottom: 14%;
+    left: 14%;
+    font-size: 36px;
+    color: #FFE8D2;
+    filter: blur(1px);
+}
+.content-banner{
+    position: absolute;
+    bottom: 14%;
+    left: 14%;
+}
+.time-event{
+    font-size: 44px;
+    font-family: WorkSansB;
+    color: #fff;
+}
+.name-event{
+    width: 80%;
+    font-family: YrsaB;
+    font-size: 144px;
+    line-height: 120px;
+    color: #F11212;
+}
+.adv{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: #F9EFEF;
+}
+.sub-adv{
+    font-size: 26px;
+    line-height: 42px;
+    color: #F2E8E8;
+}
+#voucher .name-event{
+    font-size: 100px;
+    width: 70%;
+}
+
+/*chỉnh nền từng slide show*/
+#bakery,
+#voucher
+,#merry{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#bakery{
+    background-image: url('../../img/home/sweet-bakery-8.jpg');
+}
+#voucher{
+    background-image: url('../../img/home/Gift+Voucher+Card+Mockup+Scene.png');
+}
+#merry{
+    background-image: url('../../img/home/opt2_Dollarphotoclub_55682236.jpg');
+}
+/*button tham gia*/
+.btn-join{
+    position:absolute;
+    right: 0;
+    top: 50%;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #DD8E32;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 38px;
+}
+#voucher .btn-join{
+    right: 5%;
+}
+/*..........content.................*/
+.event{
+    padding: 0 8%;
+    padding-top: 40px;
+    background-image: url('../../img/home/sweet-bakery-star.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#content{
+    width: 100%;
+    position: relative;
+    top: 100vh;
+}
+.body-event{
+    margin-top: 3%;
+    padding-bottom: 6%;
+}
+.inf-event{
+    width: 50%;
+    padding-right: 8%;
+    margin-top: 5%;
+}
+.event-title{
+    display: inline;
+    font-family: WorkSansB;
+    font-size: 54px;
+    color: #97511E;
+    text-shadow: 2px 2px 4px #000000;
+    border-bottom: #97511E 2px solid;
+}
+.name-event-title{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 50px;
+    color: #ED1E1E;
+    margin-bottom: 10px;
+}
+.content-event{
+    font-size: 16px;
+    text-align: justify;
+    font-weight: 600;
+}
+.img-event{
+    width: 50%;
+}
+.img-event img{
+    width: 100%;
+}
+.btn-join-event{
+    padding: 6px 16px;
+    font-size: 18px;
+    background-color: #ED1E1E;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    float: right;
+    margin-top: 30px;
+}
+.more{
+    font-size: 16px;
+    color: #B88A45;
+    float: right;
+    padding-top: 2%;
+    line-height: 20px;
+    text-decoration: none;
+    border-bottom: #B88A45 1px solid;
+}
+/*'----------------Sản phẩm nổi bật-----------------*/
+.produce{
+    background-image: url('../../img/home/20-1200x676-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+.background{
+    padding-left: 8%;
+    padding-right: 3%;
+    padding-bottom: 13%;
+    padding-top: 10%;
+    background-color: rgba(74, 3, 3, 0.22);
+}
+.produce .event-title{
+    color: #fff; 
+    border-bottom: #F2E8E8 2px solid;
+}
+.list-product{
+    margin-top: 60px;
+}
+.produce-member{
+    width: 20%;
+    margin-right: 5%;
+    background: #F5EDE7;
+    position: relative;
+}
+.img-containt{
+    height: 12vw;
+    position: relative;
+    overflow: hidden;
+}
+.produce-member img{
+    width: 100%;
+    position: absolute;
+
+}
+.sale {
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    padding-top: 18px;
+    border-radius: 50%;
+    color: #ffeb2c;
+    position: absolute;
+    right: -25px;
+    top: -25px;
+    z-index: 99;
+    background: #FF5858;
+}
+.sale:hover{
+    font-size: 26px;
+    text-shadow: 0 0 6px #ffffff;
+    transition: 1s;
+    padding-top:12px;
+
+}
+.name-sp{
+    font-family: WorkSansB;
+    font-size: 26px;
+    line-height: 25px;
+    text-align: center;
+    color: rgba(145, 43, 0, 0.97);
+    padding: 8px 60px;
+    border-bottom: 2px solid #f9d3a786;
+    height: 64px;
+}
+.price{
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 20px;
+}
+.price p{
+    display: inline;
+}
+.price-new {
+    float: right;
+    color: #FF3D00;
+    font-size: 26px;
+    font-weight: 800;
+    font-family: WorkSansB;
+}
+.price-old{
+    text-decoration-line: line-through;
+    font-size: 22px;
+    color: #9E9E9E;
+}
+
+.btn-order {
+    margin-left: 35%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-weight: 700;
+    width: 7vw;
+    height: 34px;
+    background-color: #ED1E1E;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.btn-order:hover{
+    background-color: chocolate;
+}
+
+.review{
+    padding: 0 10%;
+    border-top: #97511E 2px solid;
+    margin-top: 40px;
+}
+.slideshow-container{
+
+}
+.review-title{
+    margin-bottom: 20px;
+    margin-top: 50px;
+    text-align: center;
+    font-family: WorkSansB;
+    font-size:54px;
+    color: #97511E;
+    text-shadow: 5px 5px 4px rgba(243, 243, 243, 0.46);
+}
+.img-review {
+    padding-right: 8%;
+}
+.img-review img{
+    width: 100%;
+}
+.review-customer{
+    text-align: center;
+}
+.img-customer{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+.review-content{
+    text-align: justify;
+    padding: 30px;
+    background-color: #924004;
+    color: #fff;;
+    margin-left: 10%;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.name-sp-review,
+.number-sp{
+    font-size: 18px;
+    line-height: 21px;
+    color: #C79376;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 10px;
+}
+.name-cus{
+    font-size: 24px;
+    line-height: 28px;
+    color: #CD9267;
+    margin-bottom: 20px;
+}
+.review-slide .btn-slide{
+    bottom: 100px;
+}
+
+.img-containt:hover img {
+    transform: scale(1.2);
+    -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25);
+    -o-transform:scale(1.25);
+    transition: 2s;
+}
+
+#over {
+    display: none;
+    background: rgba(0, 0, 0, 0.404);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 100;
+}
+.nav-menu ul .child-items {
+    position: relative;
+    transition: 0.5s;
+}
+
+.nav-menu ul .child-items::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: auto;
+    right: 0;
+    width: 0;
+    height: 3px;
+    transition: 0.5s;
+    background-color: #d00000;
+}
+
+.nav-menu ul .child-items:hover::after {
+    width: 100%;
+    left: 0;
+    right: auto;
+}

@@ -1,0 +1,153 @@
+#nav-banner{
+    background: url(../../img/aboutus/banner.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.content-banner {
+    height: 100%;
+}
+.content-banner h1{
+    color: #fff;
+    text-align: center;
+    line-height: 100vh;
+    font-size: 78px;
+    font-family: WorkSansB;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+}
+#content{
+    text-align: center;
+    overflow: hidden;
+}
+#content h1{
+    padding-top: 8%;
+    font-size: 42px;
+    font-family: WorkSansB;
+    color: #97511E;
+    margin-bottom: 6%;
+}
+.p-light{
+    font-size: 24px;
+    font-weight: 600;
+    color: #97511E;
+}
+.img-body{
+    margin: 4% auto;
+}
+.p-bold{
+    font-size: 36px;
+    color: #97511E;
+    font-family: WorkSansB;
+    width: 70%;
+    margin: 6% auto;
+}
+.background-heard{
+    background: url(../../img/aboutus/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.adv-title{
+    font-size: 36px;
+    line-height: 300px;
+    color: #FFF9F9;
+    background: #493129;
+    font-family: WorkSansB;
+}
+.inf-store{
+    margin: 6%;
+}
+.inf-col{
+    width: 60%;
+}
+.row-inf{
+    display: flex;
+    margin-bottom:7%;
+}
+.row-inf img{
+    width: 6%;
+    height: 100%;
+}
+.inf-bold{
+    width: 94%;
+    font-size: 36px;
+    text-align: center;
+    color: #97511E;
+    font-family: WorkSansB;
+}
+.inf-light{
+    width: 94%;
+    font-size: 24px;
+    font-weight: 600;
+    color: #97511E;    
+    text-align: center;
+}
+.img-inf{
+    width: 40%;
+    padding-top: 5%;
+}
+.img-inf img{
+    width: 100%;
+}
+#footer{
+    top: 0;
+}
+/*Responsive nha mấy má*/
+@media(min-width:1024px) and (max-width: 1200px){
+    .adv-title {
+        font-size: 30px;
+        line-height: 215px;
+    }
+    
+}
+@media (min-width: 768px) and (max-width: 1023px){
+    .img-body img{
+        width: 90%;
+    }
+
+    #content h1 {
+        font-size: 40px;
+    }
+    .p-bold {
+        font-size: 30px;
+    }
+    .adv-title {
+        font-size: 20px;
+        line-height: 200px;
+    }
+    .inf-bold {
+        font-size: 20px;
+    }
+    .inf-light {
+        font-size: 18px;
+    }
+}
+@media (max-width: 767px){
+    .content-banner h1{
+        font-size: 44px;
+    }
+    #content h1 {
+        font-size: 20px;
+    }
+    .p-light {
+        font-size: 15px;
+    }
+    .img-body img{
+        width: 90%;
+    }
+    .p-bold {
+        font-size: 14px;
+    }
+    .adv-title {
+        font-size: 11px;
+        line-height: 150px;
+    }
+    .inf-bold {
+        font-size: 10px;
+    }
+    .inf-light {
+        width: 94%;
+        font-size: 9px;
+    }    
+}
